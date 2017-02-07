@@ -229,6 +229,94 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-ECMAscript6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/07/ECMAscript6/" class="article-date">
+      <time datetime="2017-02-07T11:52:35.000Z" itemprop="datePublished">2017-02-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/07/ECMAscript6/">ECMAscript6</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Ecmascript-6"><a href="#Ecmascript-6" class="headerlink" title="Ecmascript 6"></a>Ecmascript 6</h2><ul>
+<li>ECMAScript 6.0（以下简称ES6）是JavaScript语言的下一代标准，已经在2015年6月正式发布了。</li>
+<li>Ecmascript 是 JavaScript 语言的标注规范</li>
+<li>JavaScript 是 Ecmascript 规范的具体实现<ul>
+<li>具体实现取决于各大浏览器厂商的支持进度</li>
+</ul>
+</li>
+<li>Ecmascript 6 也被称作 Ecmascript 2015</li>
+<li>各大浏览器厂商对于最新的 Ecmascript 6 标准支持可以参照：<ul>
+<li><a href="http://kangax.github.io/compat-table/es6/" target="_blank" rel="external">http://kangax.github.io/compat-table/es6/</a></li>
+</ul>
+</li>
+<li>对于不支持 ES6 的环境，可以使用一些编译转码工具做转换处理再使用<ul>
+<li>例如 babel</li>
+</ul>
+</li>
+</ul>
+<h3 id="let-和-const"><a href="#let-和-const" class="headerlink" title="let 和 const"></a>let 和 const</h3><ul>
+<li>let 类似于 var，也是用来定义变量的</li>
+<li>通过 let 定义的变量是块级作用域，只在当前代码块有效</li>
+<li>const 也类似于 var，用来定义常量</li>
+<li>通过 const 定义的常量，定义的时候必须初始化</li>
+<li>const 定义的变量一旦定义，不能修改</li>
+<li>let 和 const 都没有作用域提升</li>
+<li>let 和 const 在一个块级作用域中都不能重复定义</li>
+</ul>
+<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><h4 id="let只在let命令所在的代码块内有效"><a href="#let只在let命令所在的代码块内有效" class="headerlink" title="let只在let命令所在的代码块内有效"></a>let只在let命令所在的代码块内有效</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="built_in">let</span> a =10;</div><div class="line">  var b = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">a //a is not defined</div><div class="line">b //1</div></pre></td></tr></table></figure>
+<p>上面代码在代码块之中， 分别用<code>let</code> 和 <code>var</code>声明了两个变量。 然后在代码块之外调用这两个变量，<br>结果<code>let</code>声明的变量报错，<code>var</code>声明的变量返回正确的值。这表明 <code>let</code>声明的变量只在其所在的代码块内有效。</p>
+<h4 id="列举适用let的场景"><a href="#列举适用let的场景" class="headerlink" title="列举适用let的场景"></a>列举适用let的场景</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 给每个li 绑定鼠标点击事件， 弹框弹出对应的索引</div><div class="line"></div><div class="line"><span class="keyword">for</span>( <span class="built_in">let</span> i =0; i &lt;= lis.length; i++)&#123;</div><div class="line">  lis[i].onclick = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">      alert(i);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">console.log(i)</div><div class="line">// ReferenceError: i is not defined</div></pre></td></tr></table></figure>
+<h4 id="let-不存在变量提升"><a href="#let-不存在变量提升" class="headerlink" title="let 不存在变量提升"></a>let 不存在变量提升</h4><p><code>let</code> 命令会发生’变量提升’,即变量可以在声明之前使用，值为<code>undefined</code>. 这种现象多多少少是<br>有些奇怪的，按照一般的逻辑，变量应该在声明语句之后才可以使用。</p>
+<p>为了纠正这种现象，<code>let</code> 命令改变了语法行为，它所声明的变量一定要在声明后使用，否则报错。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// var 的情况</div><div class="line">console.log(foo); // 输出undefined</div><div class="line">var foo = 2;</div><div class="line"></div><div class="line">// <span class="built_in">let</span> 的情况</div><div class="line">console.log(bar); // 报错ReferenceError</div><div class="line"><span class="built_in">let</span> bar = 2;</div></pre></td></tr></table></figure>
+<p>上面代码中，变量<code>foo</code>用<code>var</code>命令声明，会发生变量提升，即脚本开始运行时，<br>变量<code>foo</code>已经存在了，但是没有值，所以会输出<code>undefined</code>。<br>变量<code>bar</code>用<code>let</code>命令声明，不会发生变量提升。<br>这表示在声明它之前，变量<code>bar</code>是不存在的，这时如果用到它，就会抛出一个错误。</p>
+<h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><p>只要块级作用域内存在<code>let</code>命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var tmp = 123;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  tmp = <span class="string">'abc'</span>; // ReferenceError</div><div class="line">  <span class="built_in">let</span> tmp;</div><div class="line">&#125;</div><div class="line"></div><div class="line">--------------------------------</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  // TDZ开始</div><div class="line">  tmp = <span class="string">'abc'</span>; // ReferenceError</div><div class="line">  console.log(tmp); // ReferenceError</div><div class="line"></div><div class="line">  <span class="built_in">let</span> tmp; // TDZ结束</div><div class="line">  console.log(tmp); // undefined</div><div class="line"></div><div class="line">  tmp = 123;</div><div class="line">  console.log(tmp); // 123</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="不允许重复声明"><a href="#不允许重复声明" class="headerlink" title="不允许重复声明"></a>不允许重复声明</h4>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Git第一天" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
