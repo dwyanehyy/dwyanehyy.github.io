@@ -229,6 +229,90 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-howzhi项目" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/08/howzhi项目/" class="article-date">
+      <time datetime="2017-02-08T11:33:55.000Z" itemprop="datePublished">2017-02-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/08/howzhi项目/">howzhi项目</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Babel-Register"><a href="#Babel-Register" class="headerlink" title="Babel Register"></a>Babel Register</h2><h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p> 在项目根目录下创建一个 <code>.babelrc</code> 文件，写入以下内容：<br>    <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p> 安装对应的转码规则：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ES2015转码规则</span></div><div class="line">$ npm install --save-dev babel-preset-es2015</div><div class="line"></div><div class="line"><span class="comment"># react转码规则</span></div><div class="line">$ npm install --save-dev babel-preset-react</div><div class="line"></div><div class="line"><span class="comment"># ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个</span></div><div class="line">$ npm install --save-dev babel-preset-stage-0</div><div class="line">$ npm install --save-dev babel-preset-stage-1</div><div class="line">$ npm install --save-dev babel-preset-stage-2</div><div class="line">$ npm install --save-dev babel-preset-stage-3</div></pre></td></tr></table></figure>
+<h3 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h3><p>将 <code>.babelrc</code> 文件中修改为以下内容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [</div><div class="line">    <span class="string">"es2015"</span></div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>（从第四步开始，前三部必不可少）</p>
+<ul>
+<li>babel-cli：命令行转码</li>
+<li>babel-node：babel-cli工具自带一个babel-node命令，提供一个支持ES6的REPL环境</li>
+<li>babel-register：实时转码，所以只适合在开发环境使用</li>
+<li>babel-core：如果某些代码需要调用Babel的API进行转码，就要使用babel-core模块</li>
+</ul>
+<p>babel-cli：</p>
+<p>一种使用方式就是全局安装：<code>npm install -g babel-cli</code>（可以通过 <code>npm root -g</code> 查看全局包安装目录），<br>只要全局安装了 <code>babel-cli</code>，则会在命令行中多出一个命令：<code>babel</code>。</p>
+<p>这里如果使用全局安装的 <code>babel-cli</code> 进行转码是没有问题的，但是问题是如果一旦项目给了别人，<br>别人不知道你使用了这个转码工具，所以解决方式就是将 <code>babel-cli</code> 安装到本地项目中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev babel-cli</div></pre></td></tr></table></figure>
+<p>这种第三方命令行工具如果安装到本地项目，会在 <code>node_modules</code> 中生成一个目录：<code>.bin</code>，<br>然后第三方命令行工具会将对应的可执行文件放到该目录中。</p>
+<p>这样的话，就可以直接在本地项目中使用该第三方命令行工具了。</p>
+<p>对于如何使用，则可以通过配置 <code>package.json</code> 文件中的 <code>scripts</code> 字段来配置使用：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"babel-demo"</span>,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>,</div><div class="line">    <span class="attr">"build"</span>: <span class="string">"babel demo1.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"devDependencies"</span>: &#123;</div><div class="line">    <span class="attr">"babel-cli"</span>: <span class="string">"^6.22.2"</span>,</div><div class="line">    <span class="attr">"babel-preset-es2015"</span>: <span class="string">"^6.22.0"</span>,</div><div class="line">    <span class="attr">"babel-preset-react"</span>: <span class="string">"^6.22.0"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>babel-register（适合开发阶段，实时编码转换）:</p>
+<p>第一：安装 babel-register</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev babel-register</div></pre></td></tr></table></figure>
+<p>第二：添加一个傀儡文件(main.js)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'babel-register'</span>)</div><div class="line"><span class="built_in">require</span>(<span class="string">'你的核心功能代码入口文件模块'</span>)</div></pre></td></tr></table></figure>
+<p>第三：使用 node 执行 <code>main.js</code>，而不是你的入口文件.</p>
+<h3 id="–save-和-–save-dev"><a href="#–save-和-–save-dev" class="headerlink" title="–save 和 –save-dev"></a>–save 和 –save-dev</h3><p>通过 <code>--save</code> 参数安装的包，是将依赖项保存到 package.json 文件中的 dependencies 选项中。<br>通过 <code>--save-dev</code> 参数安装的包，是将依赖项保存到 package.json 文件中的 devDependencies 选项中。</p>
+<p>无论是 <code>--save</code> 或者 <code>--save-dev</code> 安装的包，通过执行 <code>npm install</code> 都会将对应的依赖包安装进来。</p>
+<p>但是，在开发阶段会有一些仅仅用来辅助开发的一些第三方包或是工具，然后最终上线运行（到了生产环境），<br>这些开发依赖项就不再需要了，就可以通过 <code>npm install --production</code> 命令仅仅安装 <code>dependencies</code> 中的<br>依赖项。</p>
+<hr>
+<h2 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// 需求一：用户访问 / 响应 hello world</div><div class="line">// 需求二：用户访问 /login 响应 hello login</div><div class="line">// 需求三：将 public 目录开放为类似于 Apache 一样，可以直接通过路径去取访问该目录中的任意资源</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-ECMAscript6" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
