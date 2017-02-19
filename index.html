@@ -229,6 +229,271 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-angular02" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/19/angular02/" class="article-date">
+      <time datetime="2017-02-19T11:48:06.000Z" itemprop="datePublished">2017-02-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/19/angular02/">angular02</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>SPA<ul>
+<li>单页面应用程序</li>
+<li>和传统网站不同：刷新跳转</li>
+<li>一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载</li>
+<li>不利于 SEO</li>
+<li>用户体验非常好</li>
+<li>服务端只需要提供数据接口</li>
+<li>前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成</li>
+<li>前后端分离</li>
+<li>例如：后台管理系统</li>
+</ul>
+</li>
+<li>表达式</li>
+<li>指令：Directive<ul>
+<li>在 ng 中，通过指令扩展了 HTML</li>
+<li>ng 就是为 HTML 提供了一大堆具有一定功能的属性：被称之为指令</li>
+</ul>
+</li>
+<li>ng-app<ul>
+<li>ng 应用程序启动的入口标识</li>
+</ul>
+</li>
+<li>ng-init<br>+ </li>
+<li>ng-bind</li>
+<li>ng-model<ul>
+<li>一般用于将模型数据和表单控件的 value 绑定起来</li>
+<li>当表单控件的 value 改变的时候，模型数据也跟着变</li>
+<li>当模块数据改变的时候，不仅仅表单控件的 value 发生变化，而且所有绑定引用了该模型数据的元素都会跟着变</li>
+</ul>
+</li>
+<li>ng-class<ul>
+<li>使用规则：ng-class=”{类名: bool类型数据, 类名: bool类型数据}”</li>
+<li>当 bool 类型数据为 true 则 作用该类名</li>
+<li>当 bool 类型数据为 false 则去除给类名</li>
+</ul>
+</li>
+<li>ng-repeat</li>
+<li>ng-click</li>
+<li>angular.module</li>
+<li>controller</li>
+</ul>
+<hr>
+<h2 id="AngularJS-Debug"><a href="#AngularJS-Debug" class="headerlink" title="AngularJS Debug"></a>AngularJS Debug</h2><h3 id="将-scope-模型对象挂载给-window"><a href="#将-scope-模型对象挂载给-window" class="headerlink" title="将 $scope 模型对象挂载给 window"></a>将 $scope 模型对象挂载给 window</h3><h3 id="Chrome-插件：AngularJS-Batarang"><a href="#Chrome-插件：AngularJS-Batarang" class="headerlink" title="Chrome 插件：AngularJS Batarang"></a>Chrome 插件：AngularJS Batarang</h3><ol>
+<li>安装</li>
+<li>安装结束重启下浏览器</li>
+<li>调试之前一定要以 http 服务的形式打开你要调试的页面</li>
+<li>在控制台中找到：AngularJS 选项卡</li>
+<li>勾选 Enable 启用（如果不成功，把浏览器重新打开试一下）</li>
+</ol>
+<hr>
+<h2 id="指令：Directive"><a href="#指令：Directive" class="headerlink" title="指令：Directive"></a>指令：Directive</h2><p>AngularJS 通过被称为 指令 的新属性来扩展 HTML，<br>具体表现形式一般为带有前缀 <code>ng-xxx</code> 的 HTML 属性。</p>
+<h3 id="指令的使用形式"><a href="#指令的使用形式" class="headerlink" title="指令的使用形式"></a>指令的使用形式</h3><ul>
+<li>ng-xxx 的属性本身并不是标准中定义的属性</li>
+<li>很多情况下无法通过语法校验</li>
+<li>HTML5 允许扩展的属性，以 <code>data-</code> 开头</li>
+<li>在 ng 中可以使用 <code>data-ng-</code> 作为前缀来让网页对 HTML5 有效</li>
+<li>二者效果相同</li>
+</ul>
+<h3 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h3><p>AngularJS 内置了很多指令，用来增强 HTML，以下是一些常用内置指令的介绍。</p>
+<ul>
+<li>ngApp</li>
+<li>ngController</li>
+<li>ngInit</li>
+<li>ngBind</li>
+<li>ng-bind</li>
+<li>ng-non-bindable</li>
+<li>ngBindHtml</li>
+<li>ngRepeat<ul>
+<li>普通数据重复报错问题</li>
+</ul>
+</li>
+<li>ng-class</li>
+<li>ng-class-even</li>
+<li>ng-class-odd</li>
+<li>ng-hide-show-if-switch</li>
+<li>ng-src</li>
+<li>ng-checked : 单选/复选是否选中，只是单向绑定数据</li>
+<li>ng-disabled : 是否禁用</li>
+<li>ng-readonly : 是否只读</li>
+<li>ng-selected : 是否选中，只是单向数据绑定</li>
+<li>ng-click ：鼠标单击</li>
+<li>ng-blur ：失去焦点</li>
+<li>ng-focus ：得到焦点</li>
+<li>ng-change ：发生改变</li>
+<li>ng-copy ：拷贝完成</li>
+<li>ng-dblclick ：鼠标双击</li>
+<li>ng-submit：表单提交</li>
+<li>ng-copy</li>
+<li>ng-cut</li>
+<li>ng-paste</li>
+<li>ng-keydown</li>
+<li>ng-keyup</li>
+<li>ng-mousedown</li>
+<li>ng-mouseenter</li>
+<li>ng-mouseleave</li>
+<li>ng-mouseover</li>
+<li>ng-mouseup</li>
+</ul>
+<hr>
+<h2 id="控制器：Controller"><a href="#控制器：Controller" class="headerlink" title="控制器：Controller"></a>控制器：Controller</h2><ul>
+<li>ng 中的控制器用来对 scope 进行操作<ul>
+<li>包括初始化数据和定义事件响应函数等</li>
+</ul>
+</li>
+<li>ng 用来解耦业务逻辑层和视图层的关键</li>
+<li>controller 操作 scope，View 则展现 scope 的内容</li>
+<li>传统前端程序中大量复杂的 DOM 操作逻辑都被转变成对 scope 的操作</li>
+</ul>
+<h3 id="定义控制器的三种方式"><a href="#定义控制器的三种方式" class="headerlink" title="定义控制器的三种方式"></a>定义控制器的三种方式</h3><p>第一种：传统方式，使用全局函数定义控制器（1.5 之后已被废弃）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DemoCtrl</span>(<span class="params">$scope</span>) </span>&#123;</div><div class="line">  <span class="comment">// code here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二种：挂载在某个模块下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'DemoApp'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoCtrl'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line">    <span class="comment">// code here</span></div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<p>第三种：最正确的方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 解决因为代码压缩造成注入对象失败问题的方式就是将第二个参数换成一个数组</span></div><div class="line">angular.module(<span class="string">'DemoApp'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoCtrl'</span>, [<span class="string">'$scope'</span>, <span class="string">'$log'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, $log</span>) </span>&#123;</div><div class="line">    <span class="comment">// code here</span></div><div class="line">  &#125;])</div></pre></td></tr></table></figure>
+<h3 id="如何划分控制器"><a href="#如何划分控制器" class="headerlink" title="如何划分控制器"></a>如何划分控制器</h3><p>一个页面中，按照不同的功能业务划分不同的控制器。</p>
+<hr>
+<h2 id="视图模型（View-Model）-scope"><a href="#视图模型（View-Model）-scope" class="headerlink" title="视图模型（View Model）: $scope"></a>视图模型（View Model）: $scope</h2><p><img src="img/$scope.jpg" alt="scope"></p>
+<ul>
+<li>$scope 是用来视图和数据之间的胶水、粘合剂</li>
+<li>视图和控制器之间的数据桥梁</li>
+<li>用于在视图和控制器之间传递数据</li>
+<li>用来暴露数据模型（数据、行为）</li>
+<li>监视模型数据的变化，做出相应的动作 <code>$scope.$watch</code></li>
+</ul>
+<h3 id="如何设计-scope"><a href="#如何设计-scope" class="headerlink" title="如何设计 $scope"></a>如何设计 $scope</h3><p>根据原型抽象数据和行为：</p>
+<ul>
+<li>数据</li>
+<li>行为</li>
+</ul>
+<h3 id="ViewModel"><a href="#ViewModel" class="headerlink" title="ViewModel"></a>ViewModel</h3><p>ng 官方把自己定义为一个 MVC 框架。</p>
+<p>很多开发使用者把它称之为 MVVM 框架。</p>
+<ul>
+<li>$scope 实际上就是 MVVM 中所谓的 VM（视图模型）</li>
+<li>正式因为 $scope 在 ng 中大量使用甚至盖过了 c 的概念，所以很多人把 ng 称之为 mvvm 框架</li>
+<li>这一点倒是无所谓</li>
+</ul>
+<h3 id="数据模型作用域"><a href="#数据模型作用域" class="headerlink" title="数据模型作用域"></a>数据模型作用域</h3><hr>
+<h2 id="模块：Module"><a href="#模块：Module" class="headerlink" title="模块：Module"></a>模块：Module</h2><ul>
+<li>模块定义了一个应用程序</li>
+<li>模块是应用程序中不同部分的容器</li>
+<li>模块是应用控制器的容器</li>
+<li>控制器通常属于一个模块</li>
+</ul>
+<p>ng 中模块的引入最重要的目的就是为了解决原来全局定义的控制器污染的问题，<br>还有一个目的就是让我们以模块的形式划分架构。</p>
+<blockquote>
+<p>可以通过 <code>angular.module()</code> 方法操作模块<br><strong>注意</strong>：该方法只有在传入两个参数时才会创建模块，否则为获取已有模块</p>
+</blockquote>
+<h3 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h3><p>定义一个模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注意：必须指定第二个参数，否则变成获取已定义的模块</span></div><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [])</div></pre></td></tr></table></figure>
+<p>获取已有模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>)</div></pre></td></tr></table></figure>
+<p>定义依赖别的模块的模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [<span class="string">'Module1'</span>, <span class="string">'Module2'</span>])</div></pre></td></tr></table></figure>
+<h3 id="如何划分模块"><a href="#如何划分模块" class="headerlink" title="如何划分模块"></a>如何划分模块</h3><h3 id="加载多个模块"><a href="#加载多个模块" class="headerlink" title="加载多个模块"></a>加载多个模块</h3><ul>
+<li>angular.bootstrap(document, [‘demo’])</li>
+<li>angular.module(‘MainModule’, [‘Module1’, ‘Module2’, ‘Module3’[,ModuleName]])</li>
+</ul>
+<hr>
+<h2 id="过滤器：Filter"><a href="#过滤器：Filter" class="headerlink" title="过滤器：Filter"></a>过滤器：Filter</h2><p>ng 中提供了过滤器规则，作用就是用来帮你方便的格式化数据的。具体使用语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; express | filter-name &#125;&#125;</div><div class="line">&#123;&#123; express | filter-name : arg &#125;&#125;</div></pre></td></tr></table></figure>
+<h3 id="内置过滤器"><a href="#内置过滤器" class="headerlink" title="内置过滤器"></a>内置过滤器</h3><ul>
+<li>currency<ul>
+<li>基本上不用</li>
+</ul>
+</li>
+<li>number<ul>
+<li>数字</li>
+</ul>
+</li>
+<li>date<ul>
+<li>日期</li>
+</ul>
+</li>
+<li>json</li>
+<li>uppercase<ul>
+<li>大写</li>
+</ul>
+</li>
+<li>lowercase<ul>
+<li>小写</li>
+</ul>
+</li>
+<li>orderBy<ul>
+<li>排序</li>
+</ul>
+</li>
+<li>limitTo<ul>
+<li>限制</li>
+</ul>
+</li>
+<li>filter<ul>
+<li>过滤器里面的过滤器</li>
+</ul>
+</li>
+</ul>
+<h3 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h3><p>过滤器的本质就是一个方法：你给它一个参数，它帮你返回一个处理过后的数据。</p>
+<blockquote>
+<p>文档：<a href="https://docs.angularjs.org/api/ng/type/angular.Module" target="_blank" rel="external">https://docs.angularjs.org/api/ng/type/angular.Module</a></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">angular</div><div class="line">  .module(<span class="string">'module'</span>)</div><div class="line">  .filter(<span class="string">'name'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">      <span class="comment">// code here</span></div><div class="line">      <span class="keyword">return</span> xxx</div><div class="line">    &#125;</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>第一，下载路由模块：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add angular-route</div></pre></td></tr></table></figure>
+<p>第二，引包：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"path/to/angular.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script src=<span class="string">"path/to/angular-route.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>第三，在要使用路由的模块中加载对路由模块的依赖：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'ngRouteExample'</span>, [<span class="string">'ngRoute'</span>])</div></pre></td></tr></table></figure>
+<p>第四，在加载路由模块的模块上通过 <code>config</code> 方法配置路由规则：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">angular</div><div class="line">  .module(<span class="string">'app'</span>, [<span class="string">'ngRoute'</span>])</div><div class="line">  .config([<span class="string">'$routeProvider'</span>, <span class="string">'$locationProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$routeProvider, $locationProvider</span>) </span>&#123;</div><div class="line">    <span class="comment">// 通过 $routeProvider 配置路由表</span></div><div class="line">    <span class="comment">// when(路由路径, 参数对象)</span></div><div class="line">    <span class="comment">// otherwise() 其它路由匹配不到，则直接进入 otherwise</span></div><div class="line">    $routeProvider</div><div class="line">      .when(<span class="string">'/'</span>, &#123;</div><div class="line">        <span class="comment">// template: '&lt;h1&gt;hello aaa&lt;/h1&gt;'</span></div><div class="line">        templateUrl: <span class="string">'views/list.html'</span> <span class="comment">// 这里的路径永远是相对于 js 文件代码在哪个 HTML 文件执行则相对于谁</span></div><div class="line">      &#125;)</div><div class="line">      .when(<span class="string">'/add'</span>, &#123;</div><div class="line">        <span class="attr">templateUrl</span>: <span class="string">'views/add.html'</span></div><div class="line">      &#125;)</div><div class="line">      .when(<span class="string">'/edit'</span>, &#123;</div><div class="line">        <span class="attr">templateUrl</span>: <span class="string">'views/edit.html'</span></div><div class="line">      &#125;)</div><div class="line">      <span class="comment">// 当匹配不到任何路由路径的时候，则直接跳转到 / 这个路由</span></div><div class="line">      .otherwise(&#123;</div><div class="line">        <span class="comment">// templateUrl: 'views/404.html'</span></div><div class="line">        redirectTo: <span class="string">'/'</span></div><div class="line">      &#125;)</div><div class="line"></div><div class="line">    <span class="comment">// 在内部通过下面的 API 配置 url 路径的 HTML5 模式</span></div><div class="line">    $locationProvider.html5Mode(<span class="literal">true</span>);</div><div class="line">  &#125;]);</div></pre></td></tr></table></figure>
+<p>第五，在 index.html 中，通过 ng-view 指令作用到你希望被路由配置的末班渲染的标签上：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-view</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-angular01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

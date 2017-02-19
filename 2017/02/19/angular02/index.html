@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>angular02 | ி冯钰杰</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SPA
+单页面应用程序
+和传统网站不同：刷新跳转
+一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载
+不利于 SEO
+用户体验非常好
+服务端只需要提供数据接口
+前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成
+前后端分离
+例如：后台管理系统
+
+
+表达式
+指令：Directive
+在 ng 中，通过指令扩展了 HTML
+ng 就是为 HTML 提供了一大堆具有一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular02">
+<meta property="og:url" content="http://yoursite.com/2017/02/19/angular02/index.html">
+<meta property="og:site_name" content="ி冯钰杰">
+<meta property="og:description" content="SPA
+单页面应用程序
+和传统网站不同：刷新跳转
+一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载
+不利于 SEO
+用户体验非常好
+服务端只需要提供数据接口
+前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成
+前后端分离
+例如：后台管理系统
+
+
+表达式
+指令：Directive
+在 ng 中，通过指令扩展了 HTML
+ng 就是为 HTML 提供了一大堆具有一">
+<meta property="og:image" content="http://yoursite.com/img/$scope.jpg">
+<meta property="og:updated_time" content="2017-02-19T11:48:59.823Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular02">
+<meta name="twitter:description" content="SPA
+单页面应用程序
+和传统网站不同：刷新跳转
+一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载
+不利于 SEO
+用户体验非常好
+服务端只需要提供数据接口
+前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成
+前后端分离
+例如：后台管理系统
+
+
+表达式
+指令：Directive
+在 ng 中，通过指令扩展了 HTML
+ng 就是为 HTML 提供了一大堆具有一">
+<meta name="twitter:image" content="http://yoursite.com/img/$scope.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="ி冯钰杰" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">冯钰杰</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">冯钰杰</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">冯钰杰</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-angular02" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/19/angular02/" class="article-date">
+      <time datetime="2017-02-19T11:48:06.000Z" itemprop="datePublished">2017-02-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      angular02
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>SPA<ul>
+<li>单页面应用程序</li>
+<li>和传统网站不同：刷新跳转</li>
+<li>一个页面：所有的页面模块内容都是通过在一个页面中异步动态的渲染加载</li>
+<li>不利于 SEO</li>
+<li>用户体验非常好</li>
+<li>服务端只需要提供数据接口</li>
+<li>前端可以专门构建用户界面，像一些路由、等操作完全都可以搬到前端来完成</li>
+<li>前后端分离</li>
+<li>例如：后台管理系统</li>
+</ul>
+</li>
+<li>表达式</li>
+<li>指令：Directive<ul>
+<li>在 ng 中，通过指令扩展了 HTML</li>
+<li>ng 就是为 HTML 提供了一大堆具有一定功能的属性：被称之为指令</li>
+</ul>
+</li>
+<li>ng-app<ul>
+<li>ng 应用程序启动的入口标识</li>
+</ul>
+</li>
+<li>ng-init<br>+ </li>
+<li>ng-bind</li>
+<li>ng-model<ul>
+<li>一般用于将模型数据和表单控件的 value 绑定起来</li>
+<li>当表单控件的 value 改变的时候，模型数据也跟着变</li>
+<li>当模块数据改变的时候，不仅仅表单控件的 value 发生变化，而且所有绑定引用了该模型数据的元素都会跟着变</li>
+</ul>
+</li>
+<li>ng-class<ul>
+<li>使用规则：ng-class=”{类名: bool类型数据, 类名: bool类型数据}”</li>
+<li>当 bool 类型数据为 true 则 作用该类名</li>
+<li>当 bool 类型数据为 false 则去除给类名</li>
+</ul>
+</li>
+<li>ng-repeat</li>
+<li>ng-click</li>
+<li>angular.module</li>
+<li>controller</li>
+</ul>
+<hr>
+<h2 id="AngularJS-Debug"><a href="#AngularJS-Debug" class="headerlink" title="AngularJS Debug"></a>AngularJS Debug</h2><h3 id="将-scope-模型对象挂载给-window"><a href="#将-scope-模型对象挂载给-window" class="headerlink" title="将 $scope 模型对象挂载给 window"></a>将 $scope 模型对象挂载给 window</h3><h3 id="Chrome-插件：AngularJS-Batarang"><a href="#Chrome-插件：AngularJS-Batarang" class="headerlink" title="Chrome 插件：AngularJS Batarang"></a>Chrome 插件：AngularJS Batarang</h3><ol>
+<li>安装</li>
+<li>安装结束重启下浏览器</li>
+<li>调试之前一定要以 http 服务的形式打开你要调试的页面</li>
+<li>在控制台中找到：AngularJS 选项卡</li>
+<li>勾选 Enable 启用（如果不成功，把浏览器重新打开试一下）</li>
+</ol>
+<hr>
+<h2 id="指令：Directive"><a href="#指令：Directive" class="headerlink" title="指令：Directive"></a>指令：Directive</h2><p>AngularJS 通过被称为 指令 的新属性来扩展 HTML，<br>具体表现形式一般为带有前缀 <code>ng-xxx</code> 的 HTML 属性。</p>
+<h3 id="指令的使用形式"><a href="#指令的使用形式" class="headerlink" title="指令的使用形式"></a>指令的使用形式</h3><ul>
+<li>ng-xxx 的属性本身并不是标准中定义的属性</li>
+<li>很多情况下无法通过语法校验</li>
+<li>HTML5 允许扩展的属性，以 <code>data-</code> 开头</li>
+<li>在 ng 中可以使用 <code>data-ng-</code> 作为前缀来让网页对 HTML5 有效</li>
+<li>二者效果相同</li>
+</ul>
+<h3 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h3><p>AngularJS 内置了很多指令，用来增强 HTML，以下是一些常用内置指令的介绍。</p>
+<ul>
+<li>ngApp</li>
+<li>ngController</li>
+<li>ngInit</li>
+<li>ngBind</li>
+<li>ng-bind</li>
+<li>ng-non-bindable</li>
+<li>ngBindHtml</li>
+<li>ngRepeat<ul>
+<li>普通数据重复报错问题</li>
+</ul>
+</li>
+<li>ng-class</li>
+<li>ng-class-even</li>
+<li>ng-class-odd</li>
+<li>ng-hide-show-if-switch</li>
+<li>ng-src</li>
+<li>ng-checked : 单选/复选是否选中，只是单向绑定数据</li>
+<li>ng-disabled : 是否禁用</li>
+<li>ng-readonly : 是否只读</li>
+<li>ng-selected : 是否选中，只是单向数据绑定</li>
+<li>ng-click ：鼠标单击</li>
+<li>ng-blur ：失去焦点</li>
+<li>ng-focus ：得到焦点</li>
+<li>ng-change ：发生改变</li>
+<li>ng-copy ：拷贝完成</li>
+<li>ng-dblclick ：鼠标双击</li>
+<li>ng-submit：表单提交</li>
+<li>ng-copy</li>
+<li>ng-cut</li>
+<li>ng-paste</li>
+<li>ng-keydown</li>
+<li>ng-keyup</li>
+<li>ng-mousedown</li>
+<li>ng-mouseenter</li>
+<li>ng-mouseleave</li>
+<li>ng-mouseover</li>
+<li>ng-mouseup</li>
+</ul>
+<hr>
+<h2 id="控制器：Controller"><a href="#控制器：Controller" class="headerlink" title="控制器：Controller"></a>控制器：Controller</h2><ul>
+<li>ng 中的控制器用来对 scope 进行操作<ul>
+<li>包括初始化数据和定义事件响应函数等</li>
+</ul>
+</li>
+<li>ng 用来解耦业务逻辑层和视图层的关键</li>
+<li>controller 操作 scope，View 则展现 scope 的内容</li>
+<li>传统前端程序中大量复杂的 DOM 操作逻辑都被转变成对 scope 的操作</li>
+</ul>
+<h3 id="定义控制器的三种方式"><a href="#定义控制器的三种方式" class="headerlink" title="定义控制器的三种方式"></a>定义控制器的三种方式</h3><p>第一种：传统方式，使用全局函数定义控制器（1.5 之后已被废弃）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DemoCtrl</span>(<span class="params">$scope</span>) </span>&#123;</div><div class="line">  <span class="comment">// code here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二种：挂载在某个模块下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'DemoApp'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoCtrl'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line">    <span class="comment">// code here</span></div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<p>第三种：最正确的方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 解决因为代码压缩造成注入对象失败问题的方式就是将第二个参数换成一个数组</span></div><div class="line">angular.module(<span class="string">'DemoApp'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoCtrl'</span>, [<span class="string">'$scope'</span>, <span class="string">'$log'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, $log</span>) </span>&#123;</div><div class="line">    <span class="comment">// code here</span></div><div class="line">  &#125;])</div></pre></td></tr></table></figure>
+<h3 id="如何划分控制器"><a href="#如何划分控制器" class="headerlink" title="如何划分控制器"></a>如何划分控制器</h3><p>一个页面中，按照不同的功能业务划分不同的控制器。</p>
+<hr>
+<h2 id="视图模型（View-Model）-scope"><a href="#视图模型（View-Model）-scope" class="headerlink" title="视图模型（View Model）: $scope"></a>视图模型（View Model）: $scope</h2><p><img src="img/$scope.jpg" alt="scope"></p>
+<ul>
+<li>$scope 是用来视图和数据之间的胶水、粘合剂</li>
+<li>视图和控制器之间的数据桥梁</li>
+<li>用于在视图和控制器之间传递数据</li>
+<li>用来暴露数据模型（数据、行为）</li>
+<li>监视模型数据的变化，做出相应的动作 <code>$scope.$watch</code></li>
+</ul>
+<h3 id="如何设计-scope"><a href="#如何设计-scope" class="headerlink" title="如何设计 $scope"></a>如何设计 $scope</h3><p>根据原型抽象数据和行为：</p>
+<ul>
+<li>数据</li>
+<li>行为</li>
+</ul>
+<h3 id="ViewModel"><a href="#ViewModel" class="headerlink" title="ViewModel"></a>ViewModel</h3><p>ng 官方把自己定义为一个 MVC 框架。</p>
+<p>很多开发使用者把它称之为 MVVM 框架。</p>
+<ul>
+<li>$scope 实际上就是 MVVM 中所谓的 VM（视图模型）</li>
+<li>正式因为 $scope 在 ng 中大量使用甚至盖过了 c 的概念，所以很多人把 ng 称之为 mvvm 框架</li>
+<li>这一点倒是无所谓</li>
+</ul>
+<h3 id="数据模型作用域"><a href="#数据模型作用域" class="headerlink" title="数据模型作用域"></a>数据模型作用域</h3><hr>
+<h2 id="模块：Module"><a href="#模块：Module" class="headerlink" title="模块：Module"></a>模块：Module</h2><ul>
+<li>模块定义了一个应用程序</li>
+<li>模块是应用程序中不同部分的容器</li>
+<li>模块是应用控制器的容器</li>
+<li>控制器通常属于一个模块</li>
+</ul>
+<p>ng 中模块的引入最重要的目的就是为了解决原来全局定义的控制器污染的问题，<br>还有一个目的就是让我们以模块的形式划分架构。</p>
+<blockquote>
+<p>可以通过 <code>angular.module()</code> 方法操作模块<br><strong>注意</strong>：该方法只有在传入两个参数时才会创建模块，否则为获取已有模块</p>
+</blockquote>
+<h3 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h3><p>定义一个模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注意：必须指定第二个参数，否则变成获取已定义的模块</span></div><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [])</div></pre></td></tr></table></figure>
+<p>获取已有模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>)</div></pre></td></tr></table></figure>
+<p>定义依赖别的模块的模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demoApp = angular.module(<span class="string">'DemoApp'</span>, [<span class="string">'Module1'</span>, <span class="string">'Module2'</span>])</div></pre></td></tr></table></figure>
+<h3 id="如何划分模块"><a href="#如何划分模块" class="headerlink" title="如何划分模块"></a>如何划分模块</h3><h3 id="加载多个模块"><a href="#加载多个模块" class="headerlink" title="加载多个模块"></a>加载多个模块</h3><ul>
+<li>angular.bootstrap(document, [‘demo’])</li>
+<li>angular.module(‘MainModule’, [‘Module1’, ‘Module2’, ‘Module3’[,ModuleName]])</li>
+</ul>
+<hr>
+<h2 id="过滤器：Filter"><a href="#过滤器：Filter" class="headerlink" title="过滤器：Filter"></a>过滤器：Filter</h2><p>ng 中提供了过滤器规则，作用就是用来帮你方便的格式化数据的。具体使用语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; express | filter-name &#125;&#125;</div><div class="line">&#123;&#123; express | filter-name : arg &#125;&#125;</div></pre></td></tr></table></figure>
+<h3 id="内置过滤器"><a href="#内置过滤器" class="headerlink" title="内置过滤器"></a>内置过滤器</h3><ul>
+<li>currency<ul>
+<li>基本上不用</li>
+</ul>
+</li>
+<li>number<ul>
+<li>数字</li>
+</ul>
+</li>
+<li>date<ul>
+<li>日期</li>
+</ul>
+</li>
+<li>json</li>
+<li>uppercase<ul>
+<li>大写</li>
+</ul>
+</li>
+<li>lowercase<ul>
+<li>小写</li>
+</ul>
+</li>
+<li>orderBy<ul>
+<li>排序</li>
+</ul>
+</li>
+<li>limitTo<ul>
+<li>限制</li>
+</ul>
+</li>
+<li>filter<ul>
+<li>过滤器里面的过滤器</li>
+</ul>
+</li>
+</ul>
+<h3 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h3><p>过滤器的本质就是一个方法：你给它一个参数，它帮你返回一个处理过后的数据。</p>
+<blockquote>
+<p>文档：<a href="https://docs.angularjs.org/api/ng/type/angular.Module" target="_blank" rel="external">https://docs.angularjs.org/api/ng/type/angular.Module</a></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">angular</div><div class="line">  .module(<span class="string">'module'</span>)</div><div class="line">  .filter(<span class="string">'name'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">      <span class="comment">// code here</span></div><div class="line">      <span class="keyword">return</span> xxx</div><div class="line">    &#125;</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>第一，下载路由模块：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add angular-route</div></pre></td></tr></table></figure>
+<p>第二，引包：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"path/to/angular.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script src=<span class="string">"path/to/angular-route.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>第三，在要使用路由的模块中加载对路由模块的依赖：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'ngRouteExample'</span>, [<span class="string">'ngRoute'</span>])</div></pre></td></tr></table></figure>
+<p>第四，在加载路由模块的模块上通过 <code>config</code> 方法配置路由规则：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">angular</div><div class="line">  .module(<span class="string">'app'</span>, [<span class="string">'ngRoute'</span>])</div><div class="line">  .config([<span class="string">'$routeProvider'</span>, <span class="string">'$locationProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$routeProvider, $locationProvider</span>) </span>&#123;</div><div class="line">    <span class="comment">// 通过 $routeProvider 配置路由表</span></div><div class="line">    <span class="comment">// when(路由路径, 参数对象)</span></div><div class="line">    <span class="comment">// otherwise() 其它路由匹配不到，则直接进入 otherwise</span></div><div class="line">    $routeProvider</div><div class="line">      .when(<span class="string">'/'</span>, &#123;</div><div class="line">        <span class="comment">// template: '&lt;h1&gt;hello aaa&lt;/h1&gt;'</span></div><div class="line">        templateUrl: <span class="string">'views/list.html'</span> <span class="comment">// 这里的路径永远是相对于 js 文件代码在哪个 HTML 文件执行则相对于谁</span></div><div class="line">      &#125;)</div><div class="line">      .when(<span class="string">'/add'</span>, &#123;</div><div class="line">        <span class="attr">templateUrl</span>: <span class="string">'views/add.html'</span></div><div class="line">      &#125;)</div><div class="line">      .when(<span class="string">'/edit'</span>, &#123;</div><div class="line">        <span class="attr">templateUrl</span>: <span class="string">'views/edit.html'</span></div><div class="line">      &#125;)</div><div class="line">      <span class="comment">// 当匹配不到任何路由路径的时候，则直接跳转到 / 这个路由</span></div><div class="line">      .otherwise(&#123;</div><div class="line">        <span class="comment">// templateUrl: 'views/404.html'</span></div><div class="line">        redirectTo: <span class="string">'/'</span></div><div class="line">      &#125;)</div><div class="line"></div><div class="line">    <span class="comment">// 在内部通过下面的 API 配置 url 路径的 HTML5 模式</span></div><div class="line">    $locationProvider.html5Mode(<span class="literal">true</span>);</div><div class="line">  &#125;]);</div></pre></td></tr></table></figure>
+<p>第五，在 index.html 中，通过 ng-view 指令作用到你希望被路由配置的末班渲染的标签上：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-view</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/02/19/angular02/">angular02</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 冯钰杰 的个人博客">冯钰杰</a></p>
+        <p><span>发布时间:</span>2017年02月19日 - 19时48分</p>
+        <p><span>最后更新:</span>2017年02月19日 - 19时48分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/19/angular02/" title="angular02">http://yoursite.com/2017/02/19/angular02/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/19/angular02/　　作者: 冯钰杰" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/19/angular01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">angular01</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AngularJS-Debug"><span class="toc-number">1.</span> <span class="toc-text">AngularJS Debug</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#将-scope-模型对象挂载给-window"><span class="toc-number">1.1.</span> <span class="toc-text">将 $scope 模型对象挂载给 window</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chrome-插件：AngularJS-Batarang"><span class="toc-number">1.2.</span> <span class="toc-text">Chrome 插件：AngularJS Batarang</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令：Directive"><span class="toc-number">2.</span> <span class="toc-text">指令：Directive</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指令的使用形式"><span class="toc-number">2.1.</span> <span class="toc-text">指令的使用形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内置指令"><span class="toc-number">2.2.</span> <span class="toc-text">内置指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制器：Controller"><span class="toc-number">3.</span> <span class="toc-text">控制器：Controller</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义控制器的三种方式"><span class="toc-number">3.1.</span> <span class="toc-text">定义控制器的三种方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何划分控制器"><span class="toc-number">3.2.</span> <span class="toc-text">如何划分控制器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视图模型（View-Model）-scope"><span class="toc-number">4.</span> <span class="toc-text">视图模型（View Model）: $scope</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何设计-scope"><span class="toc-number">4.1.</span> <span class="toc-text">如何设计 $scope</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ViewModel"><span class="toc-number">4.2.</span> <span class="toc-text">ViewModel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据模型作用域"><span class="toc-number">4.3.</span> <span class="toc-text">数据模型作用域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块：Module"><span class="toc-number">5.</span> <span class="toc-text">模块：Module</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义模块"><span class="toc-number">5.1.</span> <span class="toc-text">定义模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何划分模块"><span class="toc-number">5.2.</span> <span class="toc-text">如何划分模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加载多个模块"><span class="toc-number">5.3.</span> <span class="toc-text">加载多个模块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过滤器：Filter"><span class="toc-number">6.</span> <span class="toc-text">过滤器：Filter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内置过滤器"><span class="toc-number">6.1.</span> <span class="toc-text">内置过滤器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义过滤器"><span class="toc-number">6.2.</span> <span class="toc-text">自定义过滤器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务"><span class="toc-number">7.</span> <span class="toc-text">服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由"><span class="toc-number">8.</span> <span class="toc-text">路由</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/02/19/angular02/" data-title="angular02" data-url="http://yoursite.com/2017/02/19/angular02/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/02/19/angular01/" title="下一篇: angular01">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/angular02/">angular02</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/angular01/">angular01</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/08/howZhi-item/">howZhi-item</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/08/复习Express/">复习Express</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/07/ECMAscript6/">ECMAscript6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/05/Git第一天/">Git第一天</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/05/Git第二天/">Git第二天</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 冯钰杰
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
