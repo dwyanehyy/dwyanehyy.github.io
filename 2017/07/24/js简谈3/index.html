@@ -39,23 +39,26 @@
 
 <meta name="description" content="js简谈3instanceof 关键字 判断构造函数的原型是不是在对象的原型链上。
 1对象 instanceof 构造函数
-创建对象的三种方式函数声明123456789 function 函数名(参数列表)&amp;#123;    // 函数体 &amp;#125;``` ### 函数表达式```js  var 函数名 = function(参数列表)&amp;#123;    //函数体   &amp;#125;
-Funct">
+创建对象的三种方式函数声明123function 函数名(参数列表)&amp;#123;   // 函数体&amp;#125;
+函数表达式1var 函数名 = function(参数列表)&amp;#123;    //函数体   &amp;#125;
+Function1234var func = new">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js简谈3">
 <meta property="og:url" content="http://yoursite.com/2017/07/24/js简谈3/index.html">
 <meta property="og:site_name" content="ி冯钰杰">
 <meta property="og:description" content="js简谈3instanceof 关键字 判断构造函数的原型是不是在对象的原型链上。
 1对象 instanceof 构造函数
-创建对象的三种方式函数声明123456789 function 函数名(参数列表)&amp;#123;    // 函数体 &amp;#125;``` ### 函数表达式```js  var 函数名 = function(参数列表)&amp;#123;    //函数体   &amp;#125;
-Funct">
-<meta property="og:updated_time" content="2017-02-23T12:52:17.307Z">
+创建对象的三种方式函数声明123function 函数名(参数列表)&amp;#123;   // 函数体&amp;#125;
+函数表达式1var 函数名 = function(参数列表)&amp;#123;    //函数体   &amp;#125;
+Function1234var func = new">
+<meta property="og:updated_time" content="2017-02-23T12:55:30.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js简谈3">
 <meta name="twitter:description" content="js简谈3instanceof 关键字 判断构造函数的原型是不是在对象的原型链上。
 1对象 instanceof 构造函数
-创建对象的三种方式函数声明123456789 function 函数名(参数列表)&amp;#123;    // 函数体 &amp;#125;``` ### 函数表达式```js  var 函数名 = function(参数列表)&amp;#123;    //函数体   &amp;#125;
-Funct">
+创建对象的三种方式函数声明123function 函数名(参数列表)&amp;#123;   // 函数体&amp;#125;
+函数表达式1var 函数名 = function(参数列表)&amp;#123;    //函数体   &amp;#125;
+Function1234var func = new">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -212,7 +215,8 @@ Funct">
       
         <span itemprop="articleBody"><h1 id="js简谈3"><a href="#js简谈3" class="headerlink" title="js简谈3"></a>js简谈3</h1><h2 id="instanceof-关键字"><a href="#instanceof-关键字" class="headerlink" title="instanceof 关键字"></a>instanceof 关键字</h2><p> 判断构造函数的原型是不是在对象的原型链上。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">对象 <span class="keyword">instanceof</span> 构造函数</div></pre></td></tr></table></figure>
-<h2 id="创建对象的三种方式"><a href="#创建对象的三种方式" class="headerlink" title="创建对象的三种方式"></a>创建对象的三种方式</h2><h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> <span class="function"><span class="keyword">function</span> 函数名(<span class="params">参数列表</span>)</span>&#123;</div><div class="line">    <span class="comment">// 函数体</span></div><div class="line"> &#125;</div><div class="line"><span class="string">``</span><span class="string">` </span></div><div class="line"></div><div class="line">### 函数表达式</div><div class="line"></div><div class="line">`<span class="string">``</span>js</div><div class="line">  <span class="keyword">var</span> 函数名 = <span class="function"><span class="keyword">function</span>(<span class="params">参数列表</span>)</span>&#123;    <span class="comment">//函数体   &#125;</span></div></pre></td></tr></table></figure>
+<h2 id="创建对象的三种方式"><a href="#创建对象的三种方式" class="headerlink" title="创建对象的三种方式"></a>创建对象的三种方式</h2><h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params">参数列表</span>)</span>&#123;</div><div class="line">   <span class="comment">// 函数体</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 函数名 = function(参数列表)&#123;    //函数体   &#125;</div></pre></td></tr></table></figure>
 <h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>(); <span class="comment">// 创建空函数</span></div><div class="line"><span class="keyword">var</span> func1 = <span class="keyword">new</span> <span class="built_in">Function</span>(methodBody)  <span class="comment">// 创建有函数体的函数，methodBody 是一个字符串</span></div><div class="line"><span class="keyword">var</span> func2 = <span class="keyword">new</span> <span class="built_in">Function</span>(arg1,arg2...argn, methodBody) <span class="comment">// 创建一个以methodBody 为函数体，之前所有参数为形参名的函数，</span></div><div class="line"> <span class="comment">// 所有的参数都是字符串。</span></div></pre></td></tr></table></figure>
 <h3 id="如何解决Function的函数体过长的问题？"><a href="#如何解决Function的函数体过长的问题？" class="headerlink" title="如何解决Function的函数体过长的问题？"></a>如何解决Function的函数体过长的问题？</h3><ol>
 <li>字符串拼接</li>
@@ -473,7 +477,7 @@ Funct">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
@@ -515,7 +519,7 @@ Funct">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js简谈3"><span class="nav-number">1.</span> <span class="nav-text">js简谈3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#instanceof-关键字"><span class="nav-number">1.1.</span> <span class="nav-text">instanceof 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象的三种方式"><span class="nav-number">1.2.</span> <span class="nav-text">创建对象的三种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数声明"><span class="nav-number">1.2.1.</span> <span class="nav-text">函数声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function"><span class="nav-number">1.2.2.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何解决Function的函数体过长的问题？"><span class="nav-number">1.2.3.</span> <span class="nav-text">如何解决Function的函数体过长的问题？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval的使用"><span class="nav-number">1.3.</span> <span class="nav-text">eval的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用eval处理JSON格式数据的时候的问题"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用eval处理JSON格式数据的时候的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function和eval的异同"><span class="nav-number">1.4.</span> <span class="nav-text">Function和eval的异同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的原型链"><span class="nav-number">1.5.</span> <span class="nav-text">函数的原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-和-Function-的关系"><span class="nav-number">1.6.</span> <span class="nav-text">Object 和 Function 的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arguments-对象。"><span class="nav-number">1.7.</span> <span class="nav-text">arguments 对象。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数对象的成员"><span class="nav-number">1.8.</span> <span class="nav-text">函数对象的成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态成员以及实例成员"><span class="nav-number">1.9.</span> <span class="nav-text">静态成员以及实例成员</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js简谈3"><span class="nav-number">1.</span> <span class="nav-text">js简谈3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#instanceof-关键字"><span class="nav-number">1.1.</span> <span class="nav-text">instanceof 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象的三种方式"><span class="nav-number">1.2.</span> <span class="nav-text">创建对象的三种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数声明"><span class="nav-number">1.2.1.</span> <span class="nav-text">函数声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数表达式"><span class="nav-number">1.2.2.</span> <span class="nav-text">函数表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function"><span class="nav-number">1.2.3.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何解决Function的函数体过长的问题？"><span class="nav-number">1.2.4.</span> <span class="nav-text">如何解决Function的函数体过长的问题？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval的使用"><span class="nav-number">1.3.</span> <span class="nav-text">eval的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用eval处理JSON格式数据的时候的问题"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用eval处理JSON格式数据的时候的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function和eval的异同"><span class="nav-number">1.4.</span> <span class="nav-text">Function和eval的异同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的原型链"><span class="nav-number">1.5.</span> <span class="nav-text">函数的原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-和-Function-的关系"><span class="nav-number">1.6.</span> <span class="nav-text">Object 和 Function 的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arguments-对象。"><span class="nav-number">1.7.</span> <span class="nav-text">arguments 对象。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数对象的成员"><span class="nav-number">1.8.</span> <span class="nav-text">函数对象的成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态成员以及实例成员"><span class="nav-number">1.9.</span> <span class="nav-text">静态成员以及实例成员</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
