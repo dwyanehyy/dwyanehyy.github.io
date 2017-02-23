@@ -6,7 +6,6 @@ html {
 }
 body {
   margin: 0;
-  background-image:url(../images/1.jpeg)
 }
 article,
 aside,
@@ -1070,7 +1069,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #37ff55;
+  background: #a6f225;
 }
 .links-of-friendly a {
   display: inline-block;
@@ -1088,7 +1087,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0dffff;
+  background: #bdb330;
 }
 .sidebar-nav {
   margin: 0;
