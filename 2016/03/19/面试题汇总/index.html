@@ -1,0 +1,888 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="一.跨域问题1.是AJAX以何种格式来交换数据？用JSON来传数据
+1、基于纯文本，跨平台传递极其简单,几乎所有的语言都支持；
+2、轻量级数据格式，适合网络传输；
+3、容易编写解析
+2.是跨域的需求如何解决？跨域的产生:ajax请求,权限问题
+1.jsonp通过script的src属性调用服务端文件,制造了一个类似ajax的访问,事实上并不是ajax请求. 为了便于客户端使用数据，逐渐形成了一种非">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问答">
+<meta property="og:url" content="http://yoursite.com/2016/03/19/面试题汇总/index.html">
+<meta property="og:site_name" content="ி冯钰杰">
+<meta property="og:description" content="一.跨域问题1.是AJAX以何种格式来交换数据？用JSON来传数据
+1、基于纯文本，跨平台传递极其简单,几乎所有的语言都支持；
+2、轻量级数据格式，适合网络传输；
+3、容易编写解析
+2.是跨域的需求如何解决？跨域的产生:ajax请求,权限问题
+1.jsonp通过script的src属性调用服务端文件,制造了一个类似ajax的访问,事实上并不是ajax请求. 为了便于客户端使用数据，逐渐形成了一种非">
+<meta property="og:updated_time" content="2017-02-25T11:39:21.811Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="问答">
+<meta name="twitter:description" content="一.跨域问题1.是AJAX以何种格式来交换数据？用JSON来传数据
+1、基于纯文本，跨平台传递极其简单,几乎所有的语言都支持；
+2、轻量级数据格式，适合网络传输；
+3、容易编写解析
+2.是跨域的需求如何解决？跨域的产生:ajax请求,权限问题
+1.jsonp通过script的src属性调用服务端文件,制造了一个类似ajax的访问,事实上并不是ajax请求. 为了便于客户端使用数据，逐渐形成了一种非">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 问答 | ி冯钰杰 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title"></span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            Kategorien
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            Über
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              问答
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Veröffentlicht am
+          <time itemprop="dateCreated" datetime="2016-03-19T19:46:05+08:00" content="2016-03-19">
+            2016-03-19
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="一-跨域问题"><a href="#一-跨域问题" class="headerlink" title="一.跨域问题"></a>一.跨域问题</h2><h3 id="1-是AJAX以何种格式来交换数据？"><a href="#1-是AJAX以何种格式来交换数据？" class="headerlink" title="1.是AJAX以何种格式来交换数据？"></a>1.是AJAX以何种格式来交换数据？</h3><p>用JSON来传数据</p>
+<p>1、基于纯文本，跨平台传递极其简单,几乎所有的语言都支持；</p>
+<p>2、轻量级数据格式，适合网络传输；</p>
+<p>3、容易编写解析</p>
+<h3 id="2-是跨域的需求如何解决？"><a href="#2-是跨域的需求如何解决？" class="headerlink" title="2.是跨域的需求如何解决？"></a>2.是跨域的需求如何解决？</h3><p>跨域的产生:ajax请求,权限问题</p>
+<p>1.jsonp通过script的src属性调用服务端文件,制造了一个类似ajax的访问,事实上并不是ajax请求.<br> 为了便于客户端使用数据，逐渐形成了一种非正式传输协议，人们把它称作JSONP，该协议的一个要点就是允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据，这样客户端就可以随意定制自己的函数来自动处理返回数据了。</p>
+<h2 id="二-ajax的缓存相关知识"><a href="#二-ajax的缓存相关知识" class="headerlink" title="二.ajax的缓存相关知识?"></a>二.ajax的缓存相关知识?</h2><p> &lt;一&gt;、什么是Ajax缓存原理？<br>Ajax在发送的数据成功后，会把请求的URL和返回的响应结果保存在缓存内，当下一次调用Ajax发送相同的请求时，它会直接从缓存中把数据取出来，这是为了提高页面的响应速度和用户体验。当前这要求两次请求URL完全相同，包括参数。这个时候，浏览器就不会与服务器交互。</p>
+<p> &lt;二&gt;、Ajax缓存的好处</p>
+<p>这种设计使客户端对一些静态页面内容的请求，比如图片，css文件，js脚本等，变得更加快捷，提高了页面的响应速度，也节省了网络通信资源。</p>
+<p> &lt;三&gt;、Ajax缓存的不足</p>
+<p>Ajax缓存虽然有上述的好处，但是如果通过Ajax对一些后台数据进行更改的时候，虽然数据在后台已经发生改变，但是页面缓存中并没有改变，对于相同的URL，Ajax提交过去以后，浏览器还只是简单的从缓存中拿数据，这种情况当然就不行了。</p>
+<p> &lt;四&gt;、解决Ajax缓存问题的方法</p>
+<p>解决这个问题最有效的办法是禁止页面缓存，有以下几种处理方法：</p>
+<p>1、在ajax发送请求前加上 xmlHttpRequest.setRequestHeader(“Cache-Control”,”no-cache”);</p>
+<p>2、在服务端加 header(“Cache-Control: no-cache, must-revalidate”);</p>
+<p>3、在ajax发送请求前加上 xmlHttpRequest.setRequestHeader(“If-Modified-Since”,”0″);</p>
+<p>4、在 Ajax 的 URL 参数后加上 “?fresh=” + Math.random(); //当然这里参数 fresh 可以任意取了</p>
+<p>5、第五种方法和第四种类似，在 URL 参数后加上 “?timestamp=” + new Date().getTime();</p>
+<p>6、用POST替代GET：不推荐</p>
+<p>7、jQuery提供一个防止ajax使用缓存的方法：</p>
+<p><script type="text/javascript" language="JavaScript"><br>     $.ajaxSetup ({<br>           cache: false //close AJAX cache<br>      });<br></script><br>8、修改load 加载的url地址，如在url 多加个时间参数就可以：</p>
+<p>function loadEventInfoPage(eventId){</p>
+<pre><code>$.ajaxSetup ({ 
+   cache: true // AJAX cache  下面加上时间后load的页面中的js、css图片等都会重新加载，   
+
+     //加上这句action会重新加载，但是js、css、图片等会走缓存 
+}); 
+$(&quot;#showEventInfo&quot;).load(ctx + &quot;/custEvents/viewEvent.action&quot;,  {&quot;complaint.Id&quot;:eventId, &quot;tt&quot;:(new Date()).getTime()},function(){}) 
+</code></pre><p>}</p>
+<p>9、设置html的缓存</p>
+<p><meta http-equiv="Pragma" content="no-cache">    </p>
+<p><meta http-equiv="Cache-Control" content="no-cache">    </p>
+<meta http-equiv="Expires" content="0">
+
+
+
+<h2 id="三-express中的cookie-session"><a href="#三-express中的cookie-session" class="headerlink" title="三.express中的cookie,session"></a>三.express中的cookie,session</h2><p> cookie 和session 的区别：</p>
+<p>1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
+<p>2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br>   考虑到安全应当使用session。</p>
+<p>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能<br>   考虑到减轻服务器性能方面，应当使用COOKIE。</p>
+<p>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<p>5、所以个人建议：<br>   将登陆信息等重要信息存放为SESSION<br>   其他信息如果需要保留，可以放在COOKIE中</p>
+<p> localStorage 和 sessionStorage 只是用来在浏览器本地存储，和 HTTP 协议交互没有任何关系。</p>
+<p>和 Cookie 的区别：</p>
+<ul>
+<li>都可以存储数据</li>
+<li>Cookie 用于 HTTP 交互</li>
+<li><p>localStorage 和 sessionStorage 只是纯粹的存储,sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。<br>而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+<h2 id="四-mvc架构"><a href="#四-mvc架构" class="headerlink" title="四.mvc架构"></a>四.mvc架构</h2><p>module view controll</p>
+<h2 id="五-自动化构建工具"><a href="#五-自动化构建工具" class="headerlink" title="五.自动化构建工具"></a>五.自动化构建工具</h2><p>grunt</p>
+<h2 id="六-this指向问题"><a href="#六-this指向问题" class="headerlink" title="六.this指向问题"></a>六.this指向问题</h2><h3 id="1-函数调用模式"><a href="#1-函数调用模式" class="headerlink" title="1.函数调用模式"></a>1.函数调用模式</h3><p>函数名();<br>this —&gt; window</p>
+<h3 id="2-方法调用模式"><a href="#2-方法调用模式" class="headerlink" title="2.方法调用模式"></a>2.方法调用模式</h3><p>对象.方法名();<br>this —&gt; 调用该方法的对象</p>
+<h3 id="3-构造函数调用模式"><a href="#3-构造函数调用模式" class="headerlink" title="3.构造函数调用模式"></a>3.构造函数调用模式</h3><p>new 函数名();<br>this —&gt; new创建出来的实例 </p>
+<h3 id="4-上下文调用模式"><a href="#4-上下文调用模式" class="headerlink" title="4.上下文调用模式"></a>4.上下文调用模式</h3><h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">函数名.call(obj, arg1...argN);</div><div class="line"><span class="comment">//功能：</span></div><div class="line">    <span class="comment">//1. 调用函数</span></div><div class="line">    <span class="comment">//2. 改变this指向为第一个参数中的对象</span></div><div class="line">    <span class="comment">//3. 将第二个及以后的所有参数，依次的传递给函数作为实参</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">函数名.apply(obj, 数组or伪数组);</div><div class="line"><span class="comment">//功能：</span></div><div class="line">    <span class="comment">//1. 调用函数</span></div><div class="line">    <span class="comment">//2. 改变this指向为第一个参数中的对象</span></div><div class="line">    <span class="comment">//3. 将第二个参数的数组或者伪数组，中的元素一一拆解，依次传递给函数作为实参</span></div></pre></td></tr></table></figure>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li>如果call和apply的第一个参数为null或者undefined,this将会指向window</li>
+<li>如果call和apply的第一个参数为值类型的数据，会将值类型的数据转换成其对应的引用类型的数据，this指向该引用类型的数据</li>
+</ol>
+<p>tips: 一般情况下apply的传参特性会被使用的居多（转换伪数组为真数组，求最大值）</p>
+<h2 id="七-闭包问题"><a href="#七-闭包问题" class="headerlink" title="七.闭包问题"></a>七.闭包问题</h2><h3 id="是什么是闭包"><a href="#是什么是闭包" class="headerlink" title="是什么是闭包"></a>是什么是闭包</h3><p>闭包就指可以访问独立的数据的函数！！！</p>
+<h3 id="闭包要解决的问题"><a href="#闭包要解决的问题" class="headerlink" title="闭包要解决的问题"></a>闭包要解决的问题</h3><p>函数内部声明的变量无法再函数外部使用,解决了全局变量污染问题</p>
+<h3 id="怎么释放闭包"><a href="#怎么释放闭包" class="headerlink" title="怎么释放闭包"></a>怎么释放闭包</h3><p>直接将函数设置为null</p>
+<h3 id="如何使用闭包返回多个函数"><a href="#如何使用闭包返回多个函数" class="headerlink" title="如何使用闭包返回多个函数"></a>如何使用闭包返回多个函数</h3><p>在函数内部创建一个对象，在对象中封装多个函数，返回对象，在外部就可以使用对象，访问各个方法</p>
+<h3 id="闭包的原理"><a href="#闭包的原理" class="headerlink" title="闭包的原理"></a>闭包的原理</h3><p>上级作用域无法访问下级作用域中的变量，但是下级作用域可以访问上级作用域的变量</p>
+<h3 id="闭包的用途"><a href="#闭包的用途" class="headerlink" title="闭包的用途"></a>闭包的用途</h3><ol>
+<li>可以用来保护数据， 就是变量被保护在外部函数中，想要修改变量只能通过闭包函数，可以在闭包函数中添加一些校验逻辑，以保证数据的合理性以及安全性</li>
+<li>可以为函数新增私有的变量</li>
+</ol>
+<h2 id="八-同源策略"><a href="#八-同源策略" class="headerlink" title="八.同源策略"></a>八.同源策略</h2><p> 同源策略:是指协议,域名和端口都完全一致<br>作用:1.防止跨域请求<br>     2.出于安全性考虑<br>     3.iframe如果没有同源限制,能被截获内部数据.<br> 1.如果我们使用的是 正规的浏览器  那么 内部 就禁用了 这个操作<br> 2.浏览器的这个安全限制 称之为 同源安全策略<br> 3.不是同源的两个网站 不能嵌套获取页面信息 也不能 发送请求 获取信息<br> 4.浏览器 由于默认的 同源安全策略 限制了 跨域访问</p>
+<h2 id="九-浏览器兼容问题"><a href="#九-浏览器兼容问题" class="headerlink" title="九.浏览器兼容问题"></a>九.浏览器兼容问题</h2><h2 id="十-h5c3新特性"><a href="#十-h5c3新特性" class="headerlink" title="十.h5c3新特性"></a>十.h5c3新特性</h2><h2 id="十一-zepto与jquery的区别"><a href="#十一-zepto与jquery的区别" class="headerlink" title="十一.zepto与jquery的区别"></a>十一.zepto与jquery的区别</h2><h2 id="十二-解决跨域的方法有哪些"><a href="#十二-解决跨域的方法有哪些" class="headerlink" title="十二.解决跨域的方法有哪些"></a>十二.解决跨域的方法有哪些</h2><h3 id="1-jsonp请求方法是get"><a href="#1-jsonp请求方法是get" class="headerlink" title="1.jsonp请求方法是get"></a>1.jsonp请求方法是get</h3><h3 id="2-iframe请求方法是post"><a href="#2-iframe请求方法是post" class="headerlink" title="2.iframe请求方法是post"></a>2.iframe请求方法是post</h3><h3 id="3-cors-请求方法是post"><a href="#3-cors-请求方法是post" class="headerlink" title="3.cors 请求方法是post"></a>3.cors 请求方法是post</h3><h2 id="十三-ajax"><a href="#十三-ajax" class="headerlink" title="十三.ajax"></a>十三.ajax</h2><h3 id="1-原理-通过js-传递数据到后台-后台根据需求返回数据到前台-而且是无刷新实行的页面加载-是异步的"><a href="#1-原理-通过js-传递数据到后台-后台根据需求返回数据到前台-而且是无刷新实行的页面加载-是异步的" class="headerlink" title="1.原理:通过js,传递数据到后台,后台根据需求返回数据到前台,而且是无刷新实行的页面加载,是异步的"></a>1.原理:通过js,传递数据到后台,后台根据需求返回数据到前台,而且是无刷新实行的页面加载,是异步的</h3><p> Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。这其中最关键的一步就是从服务器获得请求数据。要清楚这个过程和原理，我们必须对XMLHttpRequest有所了解。</p>
+<p>XMLHttpRequest是ajax的核心机制，是一种支持异步请求的技术。简单的说，也就是javascript可以及时向服务器提出请求和处理响应，而不阻塞用户。达到无刷新的效果。</p>
+<h2 id="十四-常用数组的一些方法"><a href="#十四-常用数组的一些方法" class="headerlink" title="十四.常用数组的一些方法"></a>十四.常用数组的一些方法</h2><h2 id="十五-前端常见优化"><a href="#十五-前端常见优化" class="headerlink" title="十五.前端常见优化"></a>十五.前端常见优化</h2><h3 id="内容部分"><a href="#内容部分" class="headerlink" title="内容部分"></a>内容部分</h3><p> 1.尽量减少HTTP请求数(使用精灵图,合并文件)<br> 2.减少DNS查找<br> 3.避免重定向<br> 4.让Ajax可缓存</p>
+<h3 id="css部分"><a href="#css部分" class="headerlink" title="css部分"></a>css部分</h3><p> 1.避免使用CSS表达式<br> 2.选择<link>舍弃@import<br> 3.把样式表放在顶部</p>
+<h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h3><p> 1.去除重复脚本<br> 2.尽量减少对dom的访问</p>
+<h3 id="javascript-css"><a href="#javascript-css" class="headerlink" title="javascript, css"></a>javascript, css</h3><p> 1.把JavaScript和CSS放到外面<br> 2.压缩JavaScript和CSS</p>
+<h2 id="十六-innerHTML和innerText的区别"><a href="#十六-innerHTML和innerText的区别" class="headerlink" title="十六.innerHTML和innerText的区别"></a>十六.innerHTML和innerText的区别</h2><h3 id="1-获取方面"><a href="#1-获取方面" class="headerlink" title="1.获取方面:"></a>1.获取方面:</h3><pre><code>innerHTML获取的是内部的html代码;
+innerText获取的只有文本
+</code></pre><h3 id="2-设置方面"><a href="#2-设置方面" class="headerlink" title="2.设置方面:"></a>2.设置方面:</h3><pre><code>innerHTML设置的符合标签的文本,会被解析为标签
+innerText只会设置为纯文本
+</code></pre><h3 id="3-兼容性方面"><a href="#3-兼容性方面" class="headerlink" title="3.兼容性方面:"></a>3.兼容性方面:</h3><pre><code>innerText有兼容问题,不兼容旧版火狐,其他都兼容,旧版的FF只支持textConten.
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//封装 获取内部文本的兼容函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getInnerText</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> element.innerText === <span class="string">"string"</span>) &#123;</div><div class="line">        <span class="keyword">return</span> element.innerText;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> element.textContent;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//封装 设置内部文本的兼容函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setInnerText</span>(<span class="params">element, content</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> element.innerText === <span class="string">"string"</span>) &#123;</div><div class="line">        element.innerText = content;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        element.textContent = content;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><h2 id="十七-angular中基本问题"><a href="#十七-angular中基本问题" class="headerlink" title="十七.angular中基本问题"></a>十七.angular中基本问题</h2><h3 id="1-ng-click-后面能否写原生js"><a href="#1-ng-click-后面能否写原生js" class="headerlink" title="1.ng-click:后面能否写原生js"></a>1.ng-click:后面能否写原生js</h3><pre><code>ng-click的作用域是在ng-controller的作用域里,而click是全局作用域.
+</code></pre><h3 id="2-ng-if-与-ng-show-ng-hide的区别"><a href="#2-ng-if-与-ng-show-ng-hide的区别" class="headerlink" title="2.ng-if 与 ng-show,ng-hide的区别"></a>2.ng-if 与 ng-show,ng-hide的区别</h3><pre><code>1.ng-if true DOM显示
+        false 直接不加载DOM
+适合只需要控制一次显示或隐藏的元素
+2.ng-show true显示, false隐藏
+  ng-hide true隐藏, false显示
+ng-show 和ng-hide就是控制display,所以如果对于需要频繁的显示隐藏的话就推荐使用这两个
+</code></pre><h3 id="3-angular怎么访问父元素的值"><a href="#3-angular怎么访问父元素的值" class="headerlink" title="3.angular怎么访问父元素的值"></a>3.angular怎么访问父元素的值</h3><p>angurlar.element(“元素”).parent().val()</p>
+<h2 id="十八-node怎么监听80端口"><a href="#十八-node怎么监听80端口" class="headerlink" title="十八.node怎么监听80端口"></a>十八.node怎么监听80端口</h2><h2 id="十九-node事件循环机制"><a href="#十九-node事件循环机制" class="headerlink" title="十九.node事件循环机制"></a>十九.node事件循环机制</h2><p> 以下介绍两种典型的事件驱动实例。</p>
+<p> 第一个例子是关于医生看病。</p>
+<p>在美国去看医生，需要填写大量表格，比如保险、个人信息之类，传统的基于线程的系统（thread-based system），接待员叫到你，你需要在前台填写完成这些表格，你站着填单，而接待员坐着看你填单。你让接待员没办法接待下一个客户，除非完成你的业务。</p>
+<p>想让这个系统能运行的快一些，只有多加几个接待员，人力成本需要增加不少。</p>
+<p>基于事件的系统（event-based system）中，当你到窗口发现需要填写一些额外的表格而不仅仅是挂个号，接待员把表格和笔给你，告诉你可以找个座位填写，填完了以后再回去找他。你回去坐着填表，而接待员开始接待下一个客户。你没有阻塞接待员的服务。</p>
+<p>你填完表格，返回队伍中，等接待员接待完现在的客户，你把表格递给他。如果有什么问题或者需要填写额外的表格，他给你一份新的，然后重复这个过程。</p>
+<p>这个系统已经非常高效了，几乎大部分医生都是这么做的。如果等待的人太多，可以加入额外的接待员进行服务，但是肯定要比基于线程模式的少得多。</p>
+<p>第二个例子是快餐店点餐。</p>
+<p>在基于线程的方式中（thread-based way）你到了柜台前，把你的点餐单给收银员或者给收银员直接点餐，然后等在那直到你要的食物准备好给你。收银员不能接待下一个人，除非你拿到食物离开。想接待更多的客户，容易！加更多的收银员！</p>
+<p>当然，我们知道快餐店其实不是这样工作的。他们其实就是基于事件驱动方式，这样收银员更高效。只要你把点餐单给收银员，某个人已经开始准备你的食物，而同时收银员在进行收款，当你付完钱，你就站在一边而收银员已经开始接待下一个客户。在一些餐馆，甚至会给你一个号码，如果你的食物准备好了，就呼叫你的号码让你去柜台取。关键的一点是，你没有阻塞下一个客户的订餐请求。你订餐的食物做好的事件会导致某个人做某个动作（某个服务员喊你的订单号码，你听到你的号码被喊到去取食物），在编程领域，我们称这个为回调（callback function）。</p>
+<p>Node.Js做了什么工作呢？</p>
+<p>传统的web server多为基于线程模型。你启动Apache或者什么server，它开始等待接受连接。当收到一个连接，server保持连接连通直到页面或者什么事务请求完成。如果他需要花几微妙时间去读取磁盘或者访问数据库，web server就阻塞了IO操作（这也被称之为阻塞式IO).想提高这样的web server的性能就只有启动更多的server实例。</p>
+<p>相反的，Node.Js使用事件驱动模型，当web server接收到请求，就把它关闭然后进行处理，然后去服务下一个web请求。当这个请求完成，它被放回处理队列，当到达队列开头，这个结果被返回给用户。这个模型非常高效可扩展性非常强，因为webserver一直接受请求而不等待任何读写操作。（这也被称之为非阻塞式IO或者事件驱动IO）</p>
+<p>考虑下面这个过程：</p>
+<p>1，你用浏览器访问nodejs服务器上的”/about.html”</p>
+<p>2，nodejs服务器接收到你的请求，调用一个函数从磁盘上读取这个文件。</p>
+<p>3，这段时间，nodejs webserver在服务后续的web请求。</p>
+<p>4，当文件读取完毕，有一个回调函数被插入到nodejs的服务队列中。</p>
+<p>5，nodejs webserver运行这个函数，实际上就是渲染（render）了about.html页面返回给你的浏览器。</p>
+<p>好像就节省了几微秒时间，但是这很重要！特别是对于需要相应大量用户的web server。</p>
+<p>这也就是为什么Node.Js这么热这么惹人关注。而且它还使用了一个非常通用的编程语言Javascript，也让开发者可以快速容易的编写高可扩展性服务器。</p>
+<h2 id="二十-use-“strict”"><a href="#二十-use-“strict”" class="headerlink" title="二十.use “strict”"></a>二十.use “strict”</h2><h3 id="1-是es5规定的第二种运行模式-第一种是正常模式"><a href="#1-是es5规定的第二种运行模式-第一种是正常模式" class="headerlink" title="1.是es5规定的第二种运行模式(第一种是正常模式)"></a>1.是es5规定的第二种运行模式(第一种是正常模式)</h3><h3 id="2-目的"><a href="#2-目的" class="headerlink" title="2.目的:"></a>2.目的:</h3><pre><code>1.消除js语法中不合理,不严谨支出
+2.消除代码运行中的不安全之处
+3.提高 编译器效率,增加运行速度
+</code></pre><h3 id="3-缺点"><a href="#3-缺点" class="headerlink" title="3.缺点:"></a>3.缺点:</h3><pre><code>1.不兼容IE6,7,8
+2.部分文件使用严格模式,部分没有,当这些文件被merge后,严格模式失效,浪费字节.
+</code></pre><h2 id="二十一-css3中新增的伪类属性"><a href="#二十一-css3中新增的伪类属性" class="headerlink" title="二十一.css3中新增的伪类属性"></a>二十一.css3中新增的伪类属性</h2><p>E:root    选择匹配E所在文档的根元素。在（X）HTML文档中，根元素就是html元素，此时该选择器与html类型选择器匹配的内容相同。</p>
+<p>E:nth-child(n)    选择所有在其父元素中第n个位置的匹配E的子元素。<br>注意，参数n可以是数字（1、2、3）、关键字（odd、even）、公式（2n、2n+3）参数的索引从1开始。</p>
+<p>tr:nth-child(3)匹配所有表格中第3排的tr；</p>
+<p>tr:nth-child(2n+1)匹配所有表格的奇数行；</p>
+<p>tr:nth-child(2n)匹配所有表格的偶数行；</p>
+<p>tr:nth-child(odd)匹配所有表格的奇数行；</p>
+<p>tr:nth-child(even)匹配所有表格的偶数行；</p>
+<p>E:nth-last-child(n)    选择所有在其父元素中倒数第n个位置的匹配E的子元素</p>
+<p>E:nth-of-type(n)    选择父元素中第n个位置，且匹配E的子元素。<br>注意，所有匹配E的子元素被分离出来单独排序。非E的子元素不参与排序。参数n可以是数字，关键字、公式。<br>例：p:nth-of-type(1)</p>
+<p>E:nth-last-of-type(n)    选择父元素中倒数第n个位置，且匹配E的子元素。</p>
+<p>E:last-child    选择位于其父元素中最后一个位置，且匹配E的子元素。</p>
+<p>E:first-of-type    选择位于其父元素中且匹配E的第一个同类型的子元素。<br>该选择器的功能类似于 E:nth-of-type(1)</p>
+<p>E:last-of-type    选择位于其父元素中且匹配E的最后第一个同类型的子元素。<br>该选择器的功能类似于 E:nth-last-of-type(1)</p>
+<p>E:only-child    选择其父元素只包含一个子元素，且该子元素匹配E。</p>
+<p>E:only-of-type    选择其父元素只包含一个同类型的子元素，且该子元素匹配E。</p>
+<p>E:empty    选择匹配E的元素，且该元素不包含子节点。</p>
+<h2 id="二十二-如何理解http协议"><a href="#二十二-如何理解http协议" class="headerlink" title="二十二.如何理解http协议"></a>二十二.如何理解http协议</h2><p>三次握手链接:确保双方都能收到对方发送的消息</p>
+<p>  1.当客户端与服务器建立链接完成之后,接下来就将用户输入的地址按照http协议封装成请求报文,然后通过网络发送给服务器</p>
+<p>  2.接下来.服务端拿到客户端发送过来的http请求报文,然后解析处理<br>不仅浏览器在使用,移动端也会使用</p>
+<p>  3.http 客户端会根据服务端响应的消息数据做处理: 浏览器会将相应报文体的内容渲染到网页中</p>
+<p>  本质:是具有一定规则的字符串进行交换,请求,响应<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">  - 请求头</div><div class="line">  + 第一行：请求方法 请求路径 协议版本号</div><div class="line">  + 以键值对组成的请求报文首部字段</div><div class="line">  + key: value</div><div class="line">- 空行</div><div class="line">- 请求体</div><div class="line">  + 如果是普通表单 POST 请求，则报问体内容就是 key=value&amp;key=value</div><div class="line">  + 如果是 multipart-form/data 的形式，则内容：</div></pre></td></tr></table></figure></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> - 响应报文头</div><div class="line">  + 协议版本号 状态码 状态短语</div><div class="line">  + 响应首部字段，由 key: value 的格式组成</div><div class="line">  + 例如 Date: Tue, 14 Feb 2017 01:16:35 GMT 响应日期</div><div class="line">  + Connection: keep-alive 表示表示连接</div><div class="line">    * 只有经过一段时间，没有通信之后会自动断开连接</div><div class="line">    * 这就是 HTTP 中的长连接</div><div class="line">  + Content-Length: 11 内容字节大小</div><div class="line">  + 。。。</div><div class="line">- 空行</div><div class="line">- 响应报文体</div></pre></td></tr></table></figure>
+<h2 id="二十三-重绘-重排"><a href="#二十三-重绘-重排" class="headerlink" title="二十三.重绘,重排"></a>二十三.重绘,重排</h2><h2 id="二十四-原型链"><a href="#二十四-原型链" class="headerlink" title="二十四.原型链"></a>二十四.原型链</h2><h2 id="二十五-304代表啥"><a href="#二十五-304代表啥" class="headerlink" title="二十五.304代表啥"></a>二十五.304代表啥</h2><h2 id="二十六-ajax五部曲"><a href="#二十六-ajax五部曲" class="headerlink" title="二十六.ajax五部曲"></a>二十六.ajax五部曲</h2><h2 id="二十七-ajax发送请求后做了什么"><a href="#二十七-ajax发送请求后做了什么" class="headerlink" title="二十七.ajax发送请求后做了什么"></a>二十七.ajax发送请求后做了什么</h2><h2 id="二十八-mvvm核心机制"><a href="#二十八-mvvm核心机制" class="headerlink" title="二十八.mvvm核心机制"></a>二十八.mvvm核心机制</h2><h2 id="二十九-自定义事件"><a href="#二十九-自定义事件" class="headerlink" title="二十九.自定义事件"></a>二十九.自定义事件</h2><h2 id="三十-node的事件驱动机制-子线程"><a href="#三十-node的事件驱动机制-子线程" class="headerlink" title="三十.node的事件驱动机制,子线程."></a>三十.node的事件驱动机制,子线程.</h2><h2 id="三十一-去重"><a href="#三十一-去重" class="headerlink" title="三十一.去重"></a>三十一.去重</h2><h2 id="三十二-冒泡"><a href="#三十二-冒泡" class="headerlink" title="三十二.冒泡"></a>三十二.冒泡</h2><h2 id="三十三-本地有缓存-有些功能可以正常使用-其他客户电脑上无缓存-无法使用部分功能-该怎么解决"><a href="#三十三-本地有缓存-有些功能可以正常使用-其他客户电脑上无缓存-无法使用部分功能-该怎么解决" class="headerlink" title="三十三.本地有缓存,有些功能可以正常使用,其他客户电脑上无缓存,无法使用部分功能,该怎么解决?"></a>三十三.本地有缓存,有些功能可以正常使用,其他客户电脑上无缓存,无法使用部分功能,该怎么解决?</h2><h2 id="三十四-nodejs-seajs-requirejs的区别"><a href="#三十四-nodejs-seajs-requirejs的区别" class="headerlink" title="三十四.nodejs,seajs,requirejs的区别"></a>三十四.nodejs,seajs,requirejs的区别</h2><h2 id="三十五-angular中的root"><a href="#三十五-angular中的root" class="headerlink" title="三十五.angular中的root"></a>三十五.angular中的root</h2></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/20/angular02/" rel="prev">angular02</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/19/angular01/" rel="next">angular01</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff;
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        // background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        仅仅是一个功能
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="冯钰杰" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">冯钰杰</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">Kategorien</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">Tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+        </div>
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-跨域问题"><span class="nav-number">1.</span> <span class="nav-text">一.跨域问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-是AJAX以何种格式来交换数据？"><span class="nav-number">1.1.</span> <span class="nav-text">1.是AJAX以何种格式来交换数据？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-是跨域的需求如何解决？"><span class="nav-number">1.2.</span> <span class="nav-text">2.是跨域的需求如何解决？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-ajax的缓存相关知识"><span class="nav-number">2.</span> <span class="nav-text">二.ajax的缓存相关知识?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-express中的cookie-session"><span class="nav-number">3.</span> <span class="nav-text">三.express中的cookie,session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-mvc架构"><span class="nav-number">4.</span> <span class="nav-text">四.mvc架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-自动化构建工具"><span class="nav-number">5.</span> <span class="nav-text">五.自动化构建工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-this指向问题"><span class="nav-number">6.</span> <span class="nav-text">六.this指向问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-函数调用模式"><span class="nav-number">6.1.</span> <span class="nav-text">1.函数调用模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-方法调用模式"><span class="nav-number">6.2.</span> <span class="nav-text">2.方法调用模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-构造函数调用模式"><span class="nav-number">6.3.</span> <span class="nav-text">3.构造函数调用模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-上下文调用模式"><span class="nav-number">6.4.</span> <span class="nav-text">4.上下文调用模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#call"><span class="nav-number">6.5.</span> <span class="nav-text">call</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apply"><span class="nav-number">6.6.</span> <span class="nav-text">apply</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">6.7.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七-闭包问题"><span class="nav-number">7.</span> <span class="nav-text">七.闭包问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#是什么是闭包"><span class="nav-number">7.1.</span> <span class="nav-text">是什么是闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包要解决的问题"><span class="nav-number">7.2.</span> <span class="nav-text">闭包要解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么释放闭包"><span class="nav-number">7.3.</span> <span class="nav-text">怎么释放闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用闭包返回多个函数"><span class="nav-number">7.4.</span> <span class="nav-text">如何使用闭包返回多个函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的原理"><span class="nav-number">7.5.</span> <span class="nav-text">闭包的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的用途"><span class="nav-number">7.6.</span> <span class="nav-text">闭包的用途</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八-同源策略"><span class="nav-number">8.</span> <span class="nav-text">八.同源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九-浏览器兼容问题"><span class="nav-number">9.</span> <span class="nav-text">九.浏览器兼容问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十-h5c3新特性"><span class="nav-number">10.</span> <span class="nav-text">十.h5c3新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一-zepto与jquery的区别"><span class="nav-number">11.</span> <span class="nav-text">十一.zepto与jquery的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二-解决跨域的方法有哪些"><span class="nav-number">12.</span> <span class="nav-text">十二.解决跨域的方法有哪些</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-jsonp请求方法是get"><span class="nav-number">12.1.</span> <span class="nav-text">1.jsonp请求方法是get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-iframe请求方法是post"><span class="nav-number">12.2.</span> <span class="nav-text">2.iframe请求方法是post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-cors-请求方法是post"><span class="nav-number">12.3.</span> <span class="nav-text">3.cors 请求方法是post</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十三-ajax"><span class="nav-number">13.</span> <span class="nav-text">十三.ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-原理-通过js-传递数据到后台-后台根据需求返回数据到前台-而且是无刷新实行的页面加载-是异步的"><span class="nav-number">13.1.</span> <span class="nav-text">1.原理:通过js,传递数据到后台,后台根据需求返回数据到前台,而且是无刷新实行的页面加载,是异步的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十四-常用数组的一些方法"><span class="nav-number">14.</span> <span class="nav-text">十四.常用数组的一些方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十五-前端常见优化"><span class="nav-number">15.</span> <span class="nav-text">十五.前端常见优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内容部分"><span class="nav-number">15.1.</span> <span class="nav-text">内容部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css部分"><span class="nav-number">15.2.</span> <span class="nav-text">css部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js部分"><span class="nav-number">15.3.</span> <span class="nav-text">js部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript-css"><span class="nav-number">15.4.</span> <span class="nav-text">javascript, css</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十六-innerHTML和innerText的区别"><span class="nav-number">16.</span> <span class="nav-text">十六.innerHTML和innerText的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取方面"><span class="nav-number">16.1.</span> <span class="nav-text">1.获取方面:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置方面"><span class="nav-number">16.2.</span> <span class="nav-text">2.设置方面:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-兼容性方面"><span class="nav-number">16.3.</span> <span class="nav-text">3.兼容性方面:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十七-angular中基本问题"><span class="nav-number">17.</span> <span class="nav-text">十七.angular中基本问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ng-click-后面能否写原生js"><span class="nav-number">17.1.</span> <span class="nav-text">1.ng-click:后面能否写原生js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ng-if-与-ng-show-ng-hide的区别"><span class="nav-number">17.2.</span> <span class="nav-text">2.ng-if 与 ng-show,ng-hide的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-angular怎么访问父元素的值"><span class="nav-number">17.3.</span> <span class="nav-text">3.angular怎么访问父元素的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十八-node怎么监听80端口"><span class="nav-number">18.</span> <span class="nav-text">十八.node怎么监听80端口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十九-node事件循环机制"><span class="nav-number">19.</span> <span class="nav-text">十九.node事件循环机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十-use-“strict”"><span class="nav-number">20.</span> <span class="nav-text">二十.use “strict”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-是es5规定的第二种运行模式-第一种是正常模式"><span class="nav-number">20.1.</span> <span class="nav-text">1.是es5规定的第二种运行模式(第一种是正常模式)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-目的"><span class="nav-number">20.2.</span> <span class="nav-text">2.目的:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-缺点"><span class="nav-number">20.3.</span> <span class="nav-text">3.缺点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十一-css3中新增的伪类属性"><span class="nav-number">21.</span> <span class="nav-text">二十一.css3中新增的伪类属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十二-如何理解http协议"><span class="nav-number">22.</span> <span class="nav-text">二十二.如何理解http协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十三-重绘-重排"><span class="nav-number">23.</span> <span class="nav-text">二十三.重绘,重排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十四-原型链"><span class="nav-number">24.</span> <span class="nav-text">二十四.原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十五-304代表啥"><span class="nav-number">25.</span> <span class="nav-text">二十五.304代表啥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十六-ajax五部曲"><span class="nav-number">26.</span> <span class="nav-text">二十六.ajax五部曲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十七-ajax发送请求后做了什么"><span class="nav-number">27.</span> <span class="nav-text">二十七.ajax发送请求后做了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十八-mvvm核心机制"><span class="nav-number">28.</span> <span class="nav-text">二十八.mvvm核心机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二十九-自定义事件"><span class="nav-number">29.</span> <span class="nav-text">二十九.自定义事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三十-node的事件驱动机制-子线程"><span class="nav-number">30.</span> <span class="nav-text">三十.node的事件驱动机制,子线程.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三十一-去重"><span class="nav-number">31.</span> <span class="nav-text">三十一.去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三十二-冒泡"><span class="nav-number">32.</span> <span class="nav-text">三十二.冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三十三-本地有缓存-有些功能可以正常使用-其他客户电脑上无缓存-无法使用部分功能-该怎么解决"><span class="nav-number">33.</span> <span class="nav-text">三十三.本地有缓存,有些功能可以正常使用,其他客户电脑上无缓存,无法使用部分功能,该怎么解决?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三十四-nodejs-seajs-requirejs的区别"><span class="nav-number">34.</span> <span class="nav-text">三十四.nodejs,seajs,requirejs的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三十五-angular中的root"><span class="nav-number">35.</span> <span class="nav-text">三十五.angular中的root</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2017
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冯钰杰
+  </span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme by <a class="theme-link" href="http://blog.idhyt.com">idhyt</a>.<a class="theme-link" href="https://github.com/idhyt/hexo-theme-next/tree/magiclamp">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
