@@ -37,43 +37,40 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="js简谈4递归什么是递归在函数直接或者间接的调用自己，就是递归
-递归的两个要素
-自己调自己
-结束条件
+<meta name="description" content="js中一些内置对象ArrayArray -length 获取数组的长度(元素个数)
+转换数组
+valueOf() –返回数组对象本身。
+toString() –把数组转换成字符串。
+可以把数组的每一项取出来，拼接成字符串
 
-化归思想化繁为简，化难为易的过程， 转化 归结 的简称
-前n项和n的m次方斐波那契数列递归获取后代元素（重点！！）词法作用域作用域就是变量起作用的范围
-在代码写好的时候，根据代码的书写结构，就可以确定变量的作用域，这种作用域就是词法作用域
-词法作用域又叫静态作用域
-js中没有块级作用域（代码块限">
+
+join() –把字符串中的每一项进行拼接
+如果不传参数，默认按照逗号拼接 [&amp;#39;张飞&amp;#39;,&amp;#39;赵云&amp;#39;,&amp;#39;关羽&amp;#39;].join() –">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js简谈4">
-<meta property="og:url" content="http://yoursite.com/2014/07/25/js简谈4/index.html">
+<meta property="og:title" content="js中一些内置对象">
+<meta property="og:url" content="http://yoursite.com/2014/04/23/js中一些内置对象/index.html">
 <meta property="og:site_name" content="ி冯钰杰">
-<meta property="og:description" content="js简谈4递归什么是递归在函数直接或者间接的调用自己，就是递归
-递归的两个要素
-自己调自己
-结束条件
+<meta property="og:description" content="js中一些内置对象ArrayArray -length 获取数组的长度(元素个数)
+转换数组
+valueOf() –返回数组对象本身。
+toString() –把数组转换成字符串。
+可以把数组的每一项取出来，拼接成字符串
 
-化归思想化繁为简，化难为易的过程， 转化 归结 的简称
-前n项和n的m次方斐波那契数列递归获取后代元素（重点！！）词法作用域作用域就是变量起作用的范围
-在代码写好的时候，根据代码的书写结构，就可以确定变量的作用域，这种作用域就是词法作用域
-词法作用域又叫静态作用域
-js中没有块级作用域（代码块限">
-<meta property="og:updated_time" content="2017-02-23T13:01:33.274Z">
+
+join() –把字符串中的每一项进行拼接
+如果不传参数，默认按照逗号拼接 [&amp;#39;张飞&amp;#39;,&amp;#39;赵云&amp;#39;,&amp;#39;关羽&amp;#39;].join() –">
+<meta property="og:updated_time" content="2017-02-25T01:39:58.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js简谈4">
-<meta name="twitter:description" content="js简谈4递归什么是递归在函数直接或者间接的调用自己，就是递归
-递归的两个要素
-自己调自己
-结束条件
+<meta name="twitter:title" content="js中一些内置对象">
+<meta name="twitter:description" content="js中一些内置对象ArrayArray -length 获取数组的长度(元素个数)
+转换数组
+valueOf() –返回数组对象本身。
+toString() –把数组转换成字符串。
+可以把数组的每一项取出来，拼接成字符串
 
-化归思想化繁为简，化难为易的过程， 转化 归结 的简称
-前n项和n的m次方斐波那契数列递归获取后代元素（重点！！）词法作用域作用域就是变量起作用的范围
-在代码写好的时候，根据代码的书写结构，就可以确定变量的作用域，这种作用域就是词法作用域
-词法作用域又叫静态作用域
-js中没有块级作用域（代码块限">
+
+join() –把字符串中的每一项进行拼接
+如果不传参数，默认按照逗号拼接 [&amp;#39;张飞&amp;#39;,&amp;#39;赵云&amp;#39;,&amp;#39;关羽&amp;#39;].join() –">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -83,7 +80,7 @@ js中没有块级作用域（代码块限">
   };
 </script>
 
-  <title> js简谈4 | ி冯钰杰 </title>
+  <title> js中一些内置对象 | ி冯钰杰 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -200,7 +197,7 @@ js中没有块级作用域（代码块限">
           
           
             
-              js简谈4
+              js中一些内置对象
             
           
         </h1>
@@ -209,8 +206,8 @@ js中没有块级作用域（代码块限">
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2014-07-25T20:56:24+08:00" content="2014-07-25">
-            2014-07-25
+          <time itemprop="dateCreated" datetime="2014-04-23T21:39:47+08:00" content="2014-04-23">
+            2014-04-23
           </time>
         </span>
 
@@ -228,66 +225,103 @@ js中没有块级作用域（代码块限">
       
 
       
-        <span itemprop="articleBody"><h1 id="js简谈4"><a href="#js简谈4" class="headerlink" title="js简谈4"></a>js简谈4</h1><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><h3 id="什么是递归"><a href="#什么是递归" class="headerlink" title="什么是递归"></a>什么是递归</h3><p>在函数直接或者间接的调用自己，就是递归</p>
-<h3 id="递归的两个要素"><a href="#递归的两个要素" class="headerlink" title="递归的两个要素"></a>递归的两个要素</h3><ol>
-<li>自己调自己</li>
-<li>结束条件</li>
-</ol>
-<h3 id="化归思想"><a href="#化归思想" class="headerlink" title="化归思想"></a>化归思想</h3><p>化繁为简，化难为易的过程， 转化 归结 的简称</p>
-<h3 id="前n项和"><a href="#前n项和" class="headerlink" title="前n项和"></a>前n项和</h3><h3 id="n的m次方"><a href="#n的m次方" class="headerlink" title="n的m次方"></a>n的m次方</h3><h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><h3 id="递归获取后代元素（重点！！）"><a href="#递归获取后代元素（重点！！）" class="headerlink" title="递归获取后代元素（重点！！）"></a>递归获取后代元素（重点！！）</h3><h2 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h2><p>作用域就是变量起作用的范围</p>
-<p>在代码写好的时候，根据代码的书写结构，就可以确定变量的作用域，这种作用域就是词法作用域</p>
-<p>词法作用域又叫静态作用域</p>
-<p>js中没有块级作用域（代码块限定的作用域叫做块级作用域）</p>
-<h2 id="变量提升-hoisting"><a href="#变量提升-hoisting" class="headerlink" title="变量提升(hoisting)"></a>变量提升(hoisting)</h2><p>JS代码执行分两个阶段：1.预解析阶段  2.执行阶段</p>
-<p>在预解析阶段，会对代码中所有的变量声明以及函数声明做提升操作，提升到其所在的作用域的最顶上！</p>
-<h3 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h3><ol>
-<li>函数同名的时候，会全部提升，但是后面的会覆盖掉前面的</li>
-<li>函数和变量同名的情况，只会提升函数，忽略掉变量的声明</li>
-<li>变量提升是分作用域的</li>
-<li>变量提升是分段（script标签）的</li>
-<li>条件式函数声明（在条件语句中的函数声明），会将条件式函数声明视为函数表达式做处理，只会提升函数名，函数体不提升</li>
-<li>函数中形参赋值的过程是 在变量提升之前！</li>
-</ol>
-<p>函数中的形参，就相当于是在函数中声明一个局部的变量</p>
-<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>函数可以创建作用域，函数中又可以声明函数，这样就形成了作用域套作用域的链式结构，称作作用域链</p>
-<h3 id="变量搜索原则"><a href="#变量搜索原则" class="headerlink" title="变量搜索原则"></a>变量搜索原则</h3><ol>
-<li>现在使用变量的作用域中进行查找，如果找到了，就直接使用</li>
-<li>如果没有找到，就去上一级作用域链中进行查找，如果找到了，就直接使用</li>
-<li>如果没有找到，就沿着作用域链依次向上查找，直到找到全局作用域</li>
-</ol>
-<h3 id="绘制作用域链图"><a href="#绘制作用域链图" class="headerlink" title="绘制作用域链图"></a>绘制作用域链图</h3><ol>
-<li>首先绘制0级作用域链</li>
-<li>在全局作用域中查找变量以及函数的声明，用小方块的形式将其画在0级作用域线上</li>
-<li>再从0级作用域链中的函数中引出下一级作用域链</li>
-<li>重复以上步骤！！！</li>
-</ol>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><h3 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h3><p>闭包就是指可以访问独立的数据的函数！！！</p>
-<h3 id="闭包要解决的问题"><a href="#闭包要解决的问题" class="headerlink" title="闭包要解决的问题"></a>闭包要解决的问题</h3><p>函数内部声明的变量无法再函数外部使用</p>
-<h3 id="闭包的基本模型"><a href="#闭包的基本模型" class="headerlink" title="闭包的基本模型"></a>闭包的基本模型</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> data = <span class="string">""</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> data;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> inner;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="如何使用闭包返回多个函数"><a href="#如何使用闭包返回多个函数" class="headerlink" title="如何使用闭包返回多个函数"></a>如何使用闭包返回多个函数</h3><p>在函数内部创建一个对象，在对象中封装多个函数，返回对象，在外部就可以使用对象，访问各个方法</p>
-<h3 id="闭包的原理"><a href="#闭包的原理" class="headerlink" title="闭包的原理"></a>闭包的原理</h3><p>上级作用域无法访问下级作用域中的变量，但是下级作用域可以访问上级作用域的变量</p>
-<h3 id="闭包的用途"><a href="#闭包的用途" class="headerlink" title="闭包的用途"></a>闭包的用途</h3><ol>
-<li>可以用来保护数据， 就是变量被保护在外部函数中，想要修改变量只能通过闭包函数，可以在闭包函数中添加一些校验逻辑，以保证数据的合理性以及安全性</li>
-<li>可以为函数新增私有的变量</li>
-</ol>
-<h3 id="使用闭包解决for循环中注册点击事件的问题"><a href="#使用闭包解决for循环中注册点击事件的问题" class="headerlink" title="使用闭包解决for循环中注册点击事件的问题"></a>使用闭包解决for循环中注册点击事件的问题</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>点击事件在触发的时候，访问的i变量已经变成了最后一个值！！</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>通过闭包来创建一个函数，该函数拥有自己独立的一个变量j，在循环的时候，将当前的i的值保存一份交给j，再将该闭包函数注册给点击事件，这样在点击事件触发的时候，就不会去访问全局的i，而是使用自己的j</p>
-<h3 id="使用闭包解决for循环中setTimeout代码执行的问题"><a href="#使用闭包解决for循环中setTimeout代码执行的问题" class="headerlink" title="使用闭包解决for循环中setTimeout代码执行的问题"></a>使用闭包解决for循环中setTimeout代码执行的问题</h3><h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><p>将数据临时的存储起来以提高访问效率</p>
-<h3 id="浏览器缓存（重点）"><a href="#浏览器缓存（重点）" class="headerlink" title="浏览器缓存（重点）"></a>浏览器缓存（重点）</h3><ul>
-<li>将网站资源，在浏览器端进行保存，用户请求服务器的时候，这些被保存的资源就直接从本地读取<br> 而不会去服务器请求，这样就可以提升用户的访问速率。</li>
+        <span itemprop="articleBody"><h1 id="js中一些内置对象"><a href="#js中一些内置对象" class="headerlink" title="js中一些内置对象"></a>js中一些内置对象</h1><h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><p>Array -length 获取数组的长度(元素个数)</p>
+<h3 id="转换数组"><a href="#转换数组" class="headerlink" title="转换数组"></a>转换数组</h3><ul>
+<li>valueOf() –返回数组对象本身。</li>
+<li>toString() –把数组转换成字符串。<ul>
+<li>可以把数组的每一项取出来，拼接成字符串</li>
 </ul>
-<h3 id="硬件缓存"><a href="#硬件缓存" class="headerlink" title="硬件缓存"></a>硬件缓存</h3><ul>
-<li>现将数据从硬盘读取到内存中，再由cpu直接从内存中读取数据，<br>避免了直接让cpu去硬盘中读数据导致系统效率低下的问题</li>
+</li>
+<li>join() –把字符串中的每一项进行拼接<ul>
+<li>如果不传参数，默认按照逗号拼接 <code>[&#39;张飞&#39;,&#39;赵云&#39;,&#39;关羽&#39;].join()</code> –输出结果为 张飞,赵云,关羽</li>
+<li>如果传入分隔符，就按照分隔符去分割 <code>[&#39;张飞&#39;,&#39;赵云&#39;,&#39;关羽&#39;].join(&#39;|&#39;)</code>–输出结果为 张飞|赵云|关羽</li>
 </ul>
-<h3 id="CDN（重点）"><a href="#CDN（重点）" class="headerlink" title="CDN（重点）"></a>CDN（重点）</h3><ul>
-<li>在距用户最近的网络节点上缓存一份数据，当用户在去请求数据的时候，就不去较远的服务器获取，而直接在CDN服务器获取，会提升访问效率</li>
+</li>
 </ul>
-<h3 id="数据库缓存"><a href="#数据库缓存" class="headerlink" title="数据库缓存"></a>数据库缓存</h3><ul>
-<li>硬盘型数据库（关系型数据库） MySQL  Oracle SQLSEVER</li>
-<li>内存型数据库（非关系型数据库） Redis  MongoDB</li>
+<h3 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h3><ul>
+<li>arr instanceof Array  返回是布尔值. </li>
+<li>Array.isArray() es5的新方法、有兼容性</li>
 </ul>
-<h3 id="使用缓存解决递归实现的斐波那契数列存在的性能问题"><a href="#使用缓存解决递归实现的斐波那契数列存在的性能问题" class="headerlink" title="使用缓存解决递归实现的斐波那契数列存在的性能问题"></a>使用缓存解决递归实现的斐波那契数列存在的性能问题</h3><h4 id="性能问题"><a href="#性能问题" class="headerlink" title="性能问题"></a>性能问题</h4><p>由于递归实现的斐波那契数列中，存在大量的重复计算，导致性能低下</p>
-<h4 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h4><p>使用缓存，将每次计算后的结果进行保存，在下次获取该数据的时候，就直接去缓存中拿，而避免了重复的计算</p>
+<h3 id="增删方法"><a href="#增删方法" class="headerlink" title="增删方法"></a>增删方法</h3><ul>
+<li>push()   –从后面推入元素，返回新数组的length<ul>
+<li>var arr = [1,2,3]; arr.push(0)   // 返回值为 4  arr现在为[1,2,3,0]     </li>
+<li>参数可以写多个 ，依次添加。</li>
+</ul>
+</li>
+<li>pop()    –从后面删除元素， 返回被删除的元素<ul>
+<li>var arr = [1, 2, 3]; arr.pop() // 返回值为3   arr现在为[1,2]     </li>
+</ul>
+</li>
+<li>shift()  –从前面删除元素 返回被删除的元素<ul>
+<li>var arr = [1, 2, 3]; arr.shift() // 返回值为1   arr现在为[2,3] </li>
+</ul>
+</li>
+<li>unshift() –从前面加入元素  返回新数组的长度<ul>
+<li>var arr = [1,2,3]; arr.unshift(0)   // 返回值为 4  arr现在为[0,1,2,3]  </li>
+<li>参数可以写多个 ，依次添加。</li>
+</ul>
+</li>
+</ul>
+<h3 id="排序方法"><a href="#排序方法" class="headerlink" title="排序方法"></a>排序方法</h3><ul>
+<li>reverse() 翻转数组<ul>
+<li>会影响原数组</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 将数组顺序翻转的方法</span></div><div class="line"><span class="comment">// 1.</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>];</div><div class="line"><span class="keyword">var</span> newArr = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = arr.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</div><div class="line">    newArr.push(arr[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="comment">// 2.</span></div><div class="line"> <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length / <span class="number">2</span>; i++) &#123;</div><div class="line">       <span class="comment">//0 arr.length-1-0</span></div><div class="line">       <span class="comment">//1 arr.length-1-1</span></div><div class="line">       <span class="comment">//i arr.length-1-i</span></div><div class="line">       <span class="comment">//arr[i]</span></div><div class="line">       <span class="keyword">var</span> temp = arr[i];</div><div class="line">       arr[i] = arr[arr.length - <span class="number">1</span> - i];</div><div class="line">       arr[arr.length - <span class="number">1</span> - i] = temp;</div><div class="line">   &#125; </div><div class="line"></div><div class="line"><span class="comment">// 3 </span></div><div class="line">arr.reverse()</div></pre></td></tr></table></figure>
+<ul>
+<li>sort()</li>
+</ul>
+<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><ul>
+<li>concat() – 把参数拼接到当前数组<ul>
+<li>不会影响原数组</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> newArr = arr.concat([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],<span class="number">7</span>)</div><div class="line"> arr -&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"> newArr -&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</div></pre></td></tr></table></figure>
+<ul>
+<li><p>slice() –从当前数组中把要的东西复制一份，不影响原来的数组</p>
+<ul>
+<li>参数 1开始 2结束 开始的位置能取到 结束的位置取不到 [start,end)</li>
+<li>不影响原来的数组</li>
+<li>返回值是一个数组，是复制的那个元素<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">46</span>, <span class="number">8</span>];</div><div class="line">  <span class="built_in">console</span>.log(arr.slice(<span class="number">0</span>, <span class="number">2</span>)); <span class="comment">//[4,6]</span></div><div class="line">  <span class="built_in">console</span>.log(arr) <span class="comment">// [4, 6, 7, 8, 3, 46, 8]</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>splice() –删除或替换当前数组的某些项目</p>
+<ul>
+<li>1开始 2删除的个数 3要添加的元素</li>
+<li>会影响原数组</li>
+<li>返回值是一个数组，是删除或者替换掉的那个元素</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">46</span>, <span class="number">8</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.splice(<span class="number">0</span>, <span class="number">2</span>)) <span class="comment">// [4,6]</span></div><div class="line"><span class="built_in">console</span>.log(arr) <span class="comment">// [7, 8, 3, 46, 8]</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">46</span>, <span class="number">8</span>]</div><div class="line"><span class="built_in">console</span>.log(arr1.splice(<span class="number">0</span>, <span class="number">1</span>, <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>)) <span class="comment">// [4]</span></div><div class="line"><span class="built_in">console</span>.log(arr1) <span class="comment">// ["a", "b", "c", 6, 7, 8, 3, 46, 8]</span></div></pre></td></tr></table></figure>
+<h3 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h3><ul>
+<li>indexOf() –从前往后寻找指定项目在数组中的位置<ul>
+<li><code>indexof(&#39;a&#39;)</code>返回的是找到的那个元素的索引 </li>
+<li><code>indexof(&#39;a&#39;,1)</code> 第二个参数表示从哪里开始找</li>
+<li>如果找不到，就返回-1</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">"a"</span>, <span class="string">"c"</span>, <span class="string">"a"</span>, <span class="string">"z"</span>, <span class="string">"a"</span>, <span class="string">"x"</span>, <span class="string">"a"</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="string">"a"</span>)); <span class="comment">// 0</span></div><div class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="string">"a"</span>, <span class="number">2</span>)) <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+<ul>
+<li>lastIndexOf() –从后往前寻找指定项目在数组中的位置<ul>
+<li><code>lastIndexOf(&#39;a&#39;)</code>返回的是找到的那个元素的索引 </li>
+<li><code>lastIndexOf(&#39;a&#39;,-1)</code> 第二个参数表示从哪里开始找</li>
+<li>如果找不到，就返回-1</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">"a"</span>, <span class="string">"c"</span>, <span class="string">"a"</span>, <span class="string">"z"</span>, <span class="string">"a"</span>, <span class="string">"x"</span>, <span class="string">"a"</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.indexOf(<span class="string">"a"</span>)); <span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log(arr.lastIndexOf(<span class="string">"a"</span>,<span class="number">-1</span>)) <span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log(arr.lastIndexOf(<span class="string">"a"</span>,<span class="number">-2</span>)) <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(arr.lastIndexOf(<span class="string">"a"</span>,<span class="number">5</span>))  <span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log(arr.lastIndexOf(<span class="string">"a"</span>,<span class="number">3</span>))  <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+<h3 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h3><ul>
+<li>every()</li>
+<li>filter()</li>
+<li>forEach()</li>
+<li>map()</li>
+<li>some()</li>
+</ul>
 </span>
       
     </div>
@@ -299,13 +333,11 @@ js中没有块级作用域（代码块限">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2014/07/29/js简谈5/" rel="prev">js简谈5</a>
+              <a href="/2014/07/23/js简谈/" rel="prev">js简谈</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2014/07/24/js简谈3/" rel="next">js简谈3</a>
             
           </div>
         </div>
@@ -553,7 +585,7 @@ js中没有块级作用域（代码块限">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js简谈4"><span class="nav-number">1.</span> <span class="nav-text">js简谈4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">1.1.</span> <span class="nav-text">递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是递归"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归的两个要素"><span class="nav-number">1.1.2.</span> <span class="nav-text">递归的两个要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#化归思想"><span class="nav-number">1.1.3.</span> <span class="nav-text">化归思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前n项和"><span class="nav-number">1.1.4.</span> <span class="nav-text">前n项和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n的m次方"><span class="nav-number">1.1.5.</span> <span class="nav-text">n的m次方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斐波那契数列"><span class="nav-number">1.1.6.</span> <span class="nav-text">斐波那契数列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归获取后代元素（重点！！）"><span class="nav-number">1.1.7.</span> <span class="nav-text">递归获取后代元素（重点！！）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#词法作用域"><span class="nav-number">1.2.</span> <span class="nav-text">词法作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量提升-hoisting"><span class="nav-number">1.3.</span> <span class="nav-text">变量提升(hoisting)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊情况"><span class="nav-number">1.3.1.</span> <span class="nav-text">特殊情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域链"><span class="nav-number">1.4.</span> <span class="nav-text">作用域链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量搜索原则"><span class="nav-number">1.4.1.</span> <span class="nav-text">变量搜索原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制作用域链图"><span class="nav-number">1.4.2.</span> <span class="nav-text">绘制作用域链图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">1.5.</span> <span class="nav-text">闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是闭包"><span class="nav-number">1.5.1.</span> <span class="nav-text">什么是闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包要解决的问题"><span class="nav-number">1.5.2.</span> <span class="nav-text">闭包要解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的基本模型"><span class="nav-number">1.5.3.</span> <span class="nav-text">闭包的基本模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用闭包返回多个函数"><span class="nav-number">1.5.4.</span> <span class="nav-text">如何使用闭包返回多个函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的原理"><span class="nav-number">1.5.5.</span> <span class="nav-text">闭包的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的用途"><span class="nav-number">1.5.6.</span> <span class="nav-text">闭包的用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用闭包解决for循环中注册点击事件的问题"><span class="nav-number">1.5.7.</span> <span class="nav-text">使用闭包解决for循环中注册点击事件的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题"><span class="nav-number">1.5.7.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">1.5.7.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用闭包解决for循环中setTimeout代码执行的问题"><span class="nav-number">1.5.8.</span> <span class="nav-text">使用闭包解决for循环中setTimeout代码执行的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存"><span class="nav-number">1.6.</span> <span class="nav-text">缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存（重点）"><span class="nav-number">1.6.1.</span> <span class="nav-text">浏览器缓存（重点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件缓存"><span class="nav-number">1.6.2.</span> <span class="nav-text">硬件缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDN（重点）"><span class="nav-number">1.6.3.</span> <span class="nav-text">CDN（重点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库缓存"><span class="nav-number">1.6.4.</span> <span class="nav-text">数据库缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用缓存解决递归实现的斐波那契数列存在的性能问题"><span class="nav-number">1.6.5.</span> <span class="nav-text">使用缓存解决递归实现的斐波那契数列存在的性能问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#性能问题"><span class="nav-number">1.6.5.1.</span> <span class="nav-text">性能问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何解决"><span class="nav-number">1.6.5.2.</span> <span class="nav-text">如何解决</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js中一些内置对象"><span class="nav-number">1.</span> <span class="nav-text">js中一些内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">1.1.</span> <span class="nav-text">Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转换数组"><span class="nav-number">1.1.1.</span> <span class="nav-text">转换数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检测数组"><span class="nav-number">1.1.2.</span> <span class="nav-text">检测数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增删方法"><span class="nav-number">1.1.3.</span> <span class="nav-text">增删方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序方法"><span class="nav-number">1.1.4.</span> <span class="nav-text">排序方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作方法"><span class="nav-number">1.1.5.</span> <span class="nav-text">操作方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位置方法"><span class="nav-number">1.1.6.</span> <span class="nav-text">位置方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代方法"><span class="nav-number">1.1.7.</span> <span class="nav-text">迭代方法</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
